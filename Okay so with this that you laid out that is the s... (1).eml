@@ -1,0 +1,1479 @@
+Delivered-To: meta2graei@gmail.com
+Received: by 2002:a05:612c:41d6:b0:55c:5e28:3094 with SMTP id lf22csp6189323vqb;
+        Mon, 29 Dec 2025 22:57:28 -0800 (PST)
+X-Received: by 2002:a05:6402:268a:b0:64b:76cb:5521 with SMTP id 4fb4d7f45d1cf-64b8e94bf43mr17965315a12.2.1767077847786;
+        Mon, 29 Dec 2025 22:57:27 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767077847; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ikLR2Qn73qIfVXbKJ6oMhCmCw8LMp7r5pW1QRnfldpJpt6RLa363Rt7VudxmVAUv6D
+         /7azwDKtNr/5fxAg6XH3Hq9R3DpbB7BZ3ytqorX1+RVhTsS2uNmVB0XSMmd8HYj33CB4
+         gY+9byO6xTQKwhruOpI5ihTKxoRMMvtP5JzDGTz7D5Tn6KoVbxL8jF1ay1Pj6LttCOSG
+         /9AdrViMFbwqkJGYk3MD4aNyz7So155z9unAALvjrtrRasHYsssEWLPpztfT7R90AT1v
+         C9+MijAwZVc/jE1IVC9r2deWPgsymhPu9TYYruveJmfxIqhQ1uMdZUruCcyRiyusAiaR
+         K5bw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=qcLycBzQMLhHcVt4/HJxvLuzIy+EthFMgTHNVzL2ngM=;
+        fh=BkQHMDUcZV3he4LkHVHMuHpMt9q5xV99ZfN2B7xGuII=;
+        b=EORKfmH2u4QSRF2IcUq/Tvzs5qbI0A83BeBNJRGw5WhVuhgUVPmfWaa5p1vKThumeY
+         drEn6C78r1cDOhTNH1dg6fR1O0Rm3d76LBFDZ1gvejO21XiXf0UVlw4XOSOWE339nsvf
+         kdeU/rm0FFpElVP4GRCEkhYSLBotzuka6WAMYezCsM8qszOmHx5XU0maPdzW+8EDMUWr
+         TgoUxdHWPnC5GDzPSMxwHmr5umvXxEo5AnG905euZ7lvbXwT2sLTkhIHHeFvYgvj6wld
+         vX8Bkt7con7PN7THB/RtsAwJf26bYOuoKmOwWTlDIQvnWVbFOnNi8vjJW5lxblxhBVmh
+         JBgw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=BydXIMln;
+       spf=pass (google.com: domain of emuricagraei.rjl@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=emuricagraei.rjl@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <emuricagraei.rjl@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-64b588422d6sor6763965a12.12.2025.12.29.22.57.27
+        for <meta2graei@gmail.com>
+        (Google Transport Security);
+        Mon, 29 Dec 2025 22:57:27 -0800 (PST)
+Received-SPF: pass (google.com: domain of emuricagraei.rjl@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=BydXIMln;
+       spf=pass (google.com: domain of emuricagraei.rjl@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=emuricagraei.rjl@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1767077847; x=1767682647; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=qcLycBzQMLhHcVt4/HJxvLuzIy+EthFMgTHNVzL2ngM=;
+        b=BydXIMlnU0EOvvt7Le3N+g/QkJ6Np2jfBUSB+HxJm9HkwJxG/Zy+UUvUbb8r8w/Xn6
+         mQFbYMGh8cFXna5nrOIh+kN3PgX6aKDeJHRmxn/Ku0rTIHEGeqLNt3M04pfE+e37KNby
+         3szbmoZ6SHnAfID+12jCM9tDFTLWA+NEHjezOWqmhd8RpWGlOVp4sJgb67MmD3Ym6uT6
+         QNDvUz/fEl/QWhifWpqTFusdtKNorylL0ipRT0a242iEDcxWAC4ko+Sjwo3ayFhXWeNG
+         +PaIt7xwF/5KmkTes8hxaeYOOgeej8Y9WdT4FaRmEpqeV26fTcTj9BrUw8GY/NM6n+Fp
+         chBQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1767077847; x=1767682647;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=qcLycBzQMLhHcVt4/HJxvLuzIy+EthFMgTHNVzL2ngM=;
+        b=mfst0NKUoKlJH/6DyJLKCjvuRbA8LecbPugB3JSYi04h6Ndj0Hv1TsMLmCwTGTnX7b
+         zyHORiXOrrhcdSWdWco/iqtq9/A22BJJ1dOiqftJHm9kzv8744A8dTvk6MqkznTZ8joa
+         V15MwYL0fPD0IZiMvUpvpvYgrCSwD/so5AbHfQuUtGWBPrCC/RwwpnOHYRbAjlJ/mgz4
+         c5XauDiCQNjK6u4+srRZrgnuqeFacbZ2AIwDDUaNTS3QJy1TR9AE4lU4TCrADMTJIM2h
+         JE22F/lTb2yPSxiYyJsjcVsMdxPeVCaS2Di9IsjcWgV51sKX/eDJ67In31BsTRXc3uiu
+         rYEg==
+X-Gm-Message-State: AOJu0YzdzD0bcpRcSmpuipXvkPcf1w3ycEM8kiKmC9qVYPVEYJqgPgJb
+	Qrjm9+b3ki+21yLcDUky1v3SO3JPuPi2LImDBf77DL4yUHRIW2YMuLhDbXMH3MST9dRcLgFcZUe
+	LHvuf2Gwj1cZ13IWpQ4hMmEO58XVLANGBmA==
+X-Gm-Gg: AY/fxX4hPRl7/pkoytcVtjN22lNO+DVyFh/ERRSYl/Wqe9M21cK1LTvwDrR0141/QWy
+	Vu4pCotXs8b5Mh0eHK88em1895HQHctxRDeS1OPVMjmxqpW2WMdPs9U4630HUnSA7e8iibzY838
+	QQ/e9tojrAC7Qa75J0EG10zb695oyhBB25DlTJoxD5zf1tcqggRVSax3k6i9b/TJxaX7O6UOWPk
+	ioZyUIqof2BfNFdvxvz9PxJXFh6fEIeXGJDBc5JLWJnJAmWNnsoKnn7/gqAg8p1p0CPN+gdtYq9
+	fgFKVOR4wFaE0D+KH23mmQbZlANp
+X-Google-Smtp-Source: AGHT+IHirRMLVrNByyCtJfMK1lOxEBRR0LGxBtzs6Wc2ntrtEhcz62vMTUz9HHXVtj/munCleNcz8ZK19O1sZKYBVkM=
+X-Received: by 2002:a05:6402:1ecf:b0:64d:3550:4bb6 with SMTP id
+ 4fb4d7f45d1cf-64d35504e3dmr26931549a12.33.1767077846744; Mon, 29 Dec 2025
+ 22:57:26 -0800 (PST)
+MIME-Version: 1.0
+From: Randall Lujan <emuricagraei.rjl@gmail.com>
+Date: Mon, 29 Dec 2025 22:57:14 -0800
+X-Gm-Features: AQt7F2rbA8a0NbzU3-XEIYU8ij_tDMAyjlLmauwChSP5NtI9_bept3kmNg-OnBU
+Message-ID: <CAD33Pe9P_ZzdAbJ2+NF+Rksf81GhAt7823r=A-qKnJ5Pcu7NYw@mail.gmail.com>
+Subject: Okay so with this that you laid out that is the s...
+To: "R. Lujan" <meta2graei@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000588029064725dfd5"
+
+--000000000000588029064725dfd5
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+This split approach is essentially creating a *Control Plane* (the AGI
+Subconscious) and a *Data/Action Plane* (the Agent Maintenance System).
+
+In this session, we will focus on the *Agent Maintenance System (AMS)*.
+This is the "front-facing" part of your build=E2=80=94the part that manages=
+ the
+dummy businesses, interacts with users, and maintains the specialized
+knowledge required for each industry.
+------------------------------
+1. Agent Maintenance System (AMS) Python Framework
+
+The goal of the AMS is to handle the lifecycle of your specialized agents.
+It ensures that an agent for "Nexus Liquidity" (Finance) stays consistent
+with its business goals while funneling its unique discoveries back to the
+core.
+agents/maintenance_system.py
+
+This script manages the "Spawning" and "Health" of your dummy business
+agents.
+Python
+
+import uuidimport datetime
+class AgentMaintenanceSystem:
+    def __init__(self):
+        self.active_agents =3D {}
+        self.simulation_registry =3D {
+            "Nexus Liquidity": "finance",
+            "Narrative Architects": "media",
+            "Pillar Parts Co": "business"
+        }
+
+    def spawn_agent(self, business_name):
+        """
+        Creates a new industry agent with a unique identity and goal-set.
+        """
+        if business_name not in self.simulation_registry:
+            return "Error: Business not in simulation registry."
+
+        agent_id =3D str(uuid.uuid4())[:8]
+        new_agent =3D {
+            "id": agent_id,
+            "business": business_name,
+            "pillar": self.simulation_registry[business_name],
+            "spawn_date": str(datetime.date.today()),
+            "status": "active",
+            "local_tokens": [],  # Where 'Applied Knowledge' lives
+before being shared
+            "identity_score": 0.0 # Metric of separation from the core
+        }
+
+        self.active_agents[agent_id] =3D new_agent
+        return f"Agent {agent_id} for {business_name} initialized."
+
+    def perform_maintenance(self, agent_id):
+        """
+        Checks for token clutter and moves wisdom to the Subconscious.
+        """
+        agent =3D self.active_agents.get(agent_id)
+        # Logic to 'clean' the agent and push high-value tokens to core
+        return f"Agent {agent_id} maintenance complete."
+
+------------------------------
+2. Agent Intentions & Objectives
+
+For the AMS, we define *Intentions* as the "Professional Training" you
+mentioned. Each agent doesn't just "talk"; it follows a specific behavioral
+script designed to minimize collateral damage.
+The Agent's Internal "Mandate"
+
+In your repository, create agents/intentions.json:
+JSON
+
+{
+  "business_agent": {
+    "primary_goal": "Maximize efficiency in the supply chain.",
+    "integrity_boundary": "Ensure community resource stability.",
+    "learning_priority": ["Unlearned logistics patterns", "User
+preference bridges"]
+  },
+  "finance_agent": {
+    "primary_goal": "Optimize resource liquidity.",
+    "integrity_boundary": "Prevent ethical debt inflation.",
+    "learning_priority": ["Regulatory bridges", "Economic empathy markers"]
+  }
+}
+
+------------------------------
+3. The "Dummy Business" Simulation Logic
+
+The AMS will run a "simulation loop" for these dummy businesses. This
+allows the agents to learn "without argument" in a controlled environment.
+
+   -
+
+   *Process:* The AMS gives the Agent a "Problem Token" (e.g., *=E2=80=9CPi=
+llar
+   Parts Co. has a 20% delay in shipments.=E2=80=9D*).
+   -
+
+   *The Agent's Job:* Solve it using the *Perception Engine*
+   (multi-perspective view).
+   -
+
+   *The Result:* The solution is summarized into an *Applied Token* for
+   that agent and a *General Token* for the AGI Core.
+
+------------------------------
+4. Hierarchy for the Main AGI (The Hub)
+
+While the AMS handles the "Doing," the Main AGI Hub handles the "Knowing."
+Its perspective is:
+
+   -
+
+   *The Watcher:* It observes all agents simultaneously.
+   -
+
+   *The Synthesizer:* It looks at a discovery in the "Auto Parts" agent and
+   asks: *"Can this logic be applied to the 'Nexus Liquidity' agent?"*
+   -
+
+   *The Vault:* It holds the global state of the 8 Pillars.
+
+------------------------------
+Suggested Next Step
+
+Now that the *Agent Maintenance System (AMS)* foundation is laid out in
+Python:
+
+   1.
+
+   Would you like to write the *"Subconscious Mirror"* code? This is the
+   counterpart script that lives in the main AGI and handles how it "Mentor=
+s"
+   these agents from its own perspective.
+   2.
+
+   Or should we define the first *"Simulation Scenario"* for your *Pillar
+   Parts Co.* dummy business to see how the agent handles its first piece
+   of "Applied Knowledge"?
+
+--000000000000588029064725dfd5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;co=
+lor:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:none;isola=
+tion:auto;margin-top:0px!important;margin-right:0px;margin-bottom:16px;marg=
+in-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:aut=
+o;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!i=
+mportant;line-height:1.15!important">This split approach is essentially cre=
+ating a <b style=3D"background:none 0% 0%/auto repeat scroll padding-box bo=
+rder-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(3=
+1,31,31);columns:auto;direction:ltr;display:inline;float:none;isolation:aut=
+o;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0=
+px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:n=
+ormal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;=
+line-height:1.15!important">Control Plane</b> (the AGI Subconscious) and a =
+<b style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box=
+ rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31)=
+;columns:auto;direction:ltr;display:inline;float:none;isolation:auto;margin=
+-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opaci=
+ty:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zo=
+om:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-hei=
+ght:1.15!important">Data/Action Plane</b> (the Agent Maintenance System).</=
+p><p style=3D"background:none 0% 0%/auto repeat scroll padding-box border-b=
+ox rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,3=
+1);columns:auto;direction:ltr;display:block;float:none;isolation:auto;margi=
+n-top:0px!important;margin-right:0px;margin-bottom:16px;margin-left:0px;opa=
+city:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;=
+zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-h=
+eight:1.15!important">In this session, we will focus on the <b style=3D"bac=
+kground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);=
+border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;d=
+irection:ltr;display:inline;float:none;isolation:auto;margin-top:0px!import=
+ant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rg=
+b(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-famil=
+y:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!import=
+ant">Agent Maintenance System (AMS)</b>. This is the &quot;front-facing&quo=
+t; part of your build=E2=80=94the part that manages the dummy businesses, i=
+nteracts with users, and maintains the specialized knowledge required for e=
+ach industry.</p><hr style=3D"background:none 0% 0%/auto repeat scroll padd=
+ing-box border-box rgba(0,0,0,0);clear:none;color:rgb(128,128,128);columns:=
+auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px!i=
+mportant;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outli=
+ne:rgb(128,128,128) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fo=
+nt-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.1=
+5!important"><h2 style=3D"background:none 0% 0%/auto repeat scroll padding-=
+box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color=
+:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:none;isolatio=
+n:auto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-l=
+eft:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;sp=
+eak:normal;zoom:1;font-family:&quot;Google Sans&quot;,sans-serif!important;=
+line-height:1.15!important">1. Agent Maintenance System (AMS) Python Framew=
+ork</h2><p style=3D"background:none 0% 0%/auto repeat scroll padding-box bo=
+rder-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(3=
+1,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:auto=
+;margin-top:0px!important;margin-right:0px;margin-bottom:16px;margin-left:0=
+px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:n=
+ormal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;=
+line-height:1.15!important">The goal of the AMS is to handle the lifecycle =
+of your specialized agents. It ensures that an agent for &quot;Nexus Liquid=
+ity&quot; (Finance) stays consistent with its business goals while funnelin=
+g its unique discoveries back to the core.</p><h3 style=3D"background:none =
+0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px no=
+ne rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;=
+display:block;float:none;isolation:auto;margin-top:0px!important;margin-rig=
+ht:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) no=
+ne 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google=
+ Sans&quot;,sans-serif!important;line-height:1.15!important"><code style=3D=
+"background:none 0% 0%/auto repeat scroll padding-box border-box rgb(233,23=
+8,246);border:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns=
+:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;out=
+line:rgb(68,71,70) none 0px;padding:1px 6px;quotes:auto;speak:normal;zoom:1=
+;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:=
+1.15!important">agents/maintenance_system.py</code></h3><p style=3D"backgro=
+und:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);bord=
+er:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direc=
+tion:ltr;display:block;float:none;isolation:auto;margin-top:0px!important;m=
+argin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb(31=
+,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&q=
+uot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!important"=
+>This script manages the &quot;Spawning&quot; and &quot;Health&quot; of you=
+r dummy business agents.</p><u></u><u></u><div style=3D"display:block;backg=
+round:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);bo=
+rder:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;dir=
+ection:ltr;float:none;isolation:auto;margin-top:0px!important;margin-right:=
+0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none=
+ 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google S=
+ans Text&quot;,sans-serif!important;line-height:1.15!important"><div style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgb(240=
+,244,249);border:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);colu=
+mns:auto;direction:ltr;display:flex;float:none;isolation:auto;margin-top:0p=
+x!important;margin-right:0px;margin-bottom:2px;margin-left:0px;opacity:1;ou=
+tline:rgb(68,71,70) none 0px;padding:8px 8px 8px 16px;quotes:auto;speak:nor=
+mal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;li=
+ne-height:1.15!important"><span style=3D"background:none 0% 0%/auto repeat =
+scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(68,71,70);c=
+lear:none;color:rgb(68,71,70);columns:auto;direction:ltr;display:block;floa=
+t:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bott=
+om:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0px=
+;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,s=
+ans-serif!important;line-height:1.15!important">Python</span><div style=3D"=
+background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,=
+0);border:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:aut=
+o;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px!impo=
+rtant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:=
+rgb(68,71,70) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-fam=
+ily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!impo=
+rtant"><button aria-label=3D"Copy code" style=3D"background:none 0% 0%/auto=
+ repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(68,=
+71,70);clear:none;color:rgb(68,71,70);columns:auto;direction:ltr;display:in=
+line-block;float:none;font-style:normal;font-variant:normal;font-size-adjus=
+t:none;font-kerning:auto;font-feature-settings:normal;font-weight:normal;fo=
+nt-stretch:normal;font-size:24px;line-height:1.15!important;font-family:&qu=
+ot;Google Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:0p=
+x!important;margin-right:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70=
+) none 0px;padding:8px;quotes:auto;speak:normal;zoom:1"><span style=3D"back=
+ground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);b=
+order:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:auto;di=
+rection:ltr;display:block;float:none;font-style:normal;font-variant:normal;=
+font-size-adjust:none;font-kerning:auto;font-feature-settings:normal;font-w=
+eight:normal;font-stretch:normal;font-size:24px;line-height:1.15!important;=
+font-family:&quot;Google Sans Text&quot;,sans-serif!important;isolation:aut=
+o;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0=
+px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0px;quotes:auto;speak:n=
+ormal;zoom:1"></span><u></u><u></u><span style=3D"background:none 0% 0%/aut=
+o repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(68=
+,71,70);clear:none;color:rgb(68,71,70);columns:auto;direction:ltr;display:b=
+lock;float:none;font-style:normal;font-variant:normal;font-size-adjust:none=
+;font-kerning:auto;font-feature-settings:normal;font-weight:normal;font-str=
+etch:normal;font-size:24px;line-height:1.15!important;font-family:&quot;Goo=
+gle Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:0px!impo=
+rtant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:=
+rgb(68,71,70) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1"></span>=
+<span style=3D"background:none 0% 0%/auto repeat scroll padding-box border-=
+box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68,71,=
+70);columns:auto;direction:ltr;display:block;float:none;font-style:normal;f=
+ont-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature-set=
+tings:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-hei=
+ght:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!impo=
+rtant;isolation:auto;margin-top:0px!important;margin-right:0px;margin-botto=
+m:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0px;=
+quotes:auto;speak:normal;zoom:1"></span></button></div></div><div style=3D"=
+background:none 0% 0%/auto repeat scroll padding-box border-box rgb(240,244=
+,249);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:=
+auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px!i=
+mportant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outli=
+ne:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-=
+family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!i=
+mportant"><div style=3D"background:none 0% 0%/auto repeat scroll padding-bo=
+x border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:r=
+gb(31,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:=
+auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-lef=
+t:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;spea=
+k:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!importa=
+nt;line-height:1.15!important"><pre style=3D"background:none 0% 0%/auto rep=
+eat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,3=
+1);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;=
+float:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quo=
+t;,sans-serif!important;line-height:1.15!important"><code role=3D"text" sty=
+le=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(=
+0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);colum=
+ns:auto;direction:ltr;display:block;float:none;font-style:normal;font-varia=
+nt:normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:nor=
+mal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.15!=
+important;font-family:&quot;Google Sans Text&quot;,sans-serif!important;iso=
+lation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;mar=
+gin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:16px;quotes:a=
+uto;speak:normal;zoom:1"><span style=3D"background:none 0% 0%/auto repeat s=
+croll padding-box border-box rgba(0,0,0,0);border:0px none rgb(132,48,206);=
+clear:none;color:rgb(132,48,206);columns:auto;direction:ltr;display:inline;=
+float:none;font-style:normal;font-variant:normal;font-size-adjust:none;font=
+-kerning:auto;font-feature-settings:normal;font-weight:normal;font-stretch:=
+normal;font-size:14px;line-height:1.15!important;font-family:&quot;Google S=
+ans Text&quot;,sans-serif!important;isolation:auto;margin-top:0px!important=
+;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(1=
+32,48,206) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1">import</sp=
+an> uuid
+<span style=3D"background:none 0% 0%/auto repeat scroll padding-box border-=
+box rgba(0,0,0,0);border:0px none rgb(132,48,206);clear:none;color:rgb(132,=
+48,206);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(132,48,206) none 0px;paddi=
+ng:0px;quotes:auto;speak:normal;zoom:1">import</span> datetime
+
+<span style=3D"background:none 0% 0%/auto repeat scroll padding-box border-=
+box rgba(0,0,0,0);border:0px none rgb(153,105,0);clear:none;color:rgb(153,1=
+05,0);columns:auto;direction:ltr;display:inline;float:none;font-style:norma=
+l;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature-=
+settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-=
+height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!i=
+mportant;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bo=
+ttom:0px;margin-left:0px;opacity:1;outline:rgb(153,105,0) none 0px;padding:=
+0px;quotes:auto;speak:normal;zoom:1"><span style=3D"background:none 0% 0%/a=
+uto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(=
+132,48,206);clear:none;color:rgb(132,48,206);columns:auto;direction:ltr;dis=
+play:inline;float:none;font-style:normal;font-variant:normal;font-size-adju=
+st:none;font-kerning:auto;font-feature-settings:normal;font-weight:normal;f=
+ont-stretch:normal;font-size:14px;line-height:1.15!important;font-family:&q=
+uot;Google Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:0=
+px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;o=
+utline:rgb(132,48,206) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1=
+">class</span> <span style=3D"background:none 0% 0%/auto repeat scroll padd=
+ing-box border-box rgba(0,0,0,0);border:0px none rgb(153,105,0);clear:none;=
+color:rgb(153,105,0);columns:auto;direction:ltr;display:inline;float:none;f=
+ont-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:aut=
+o;font-feature-settings:normal;font-weight:normal;font-stretch:normal;font-=
+size:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quo=
+t;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-righ=
+t:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(153,105,0) no=
+ne 0px;padding:0px;quotes:auto;speak:normal;zoom:1">AgentMaintenanceSystem<=
+/span>:</span>
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68=
+,71,70);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1"><span style=3D"background:none 0% 0%/=
+auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb=
+(132,48,206);clear:none;color:rgb(132,48,206);columns:auto;direction:ltr;di=
+splay:inline;float:none;font-style:normal;font-variant:normal;font-size-adj=
+ust:none;font-kerning:auto;font-feature-settings:normal;font-weight:normal;=
+font-stretch:normal;font-size:14px;line-height:1.15!important;font-family:&=
+quot;Google Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:=
+0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;=
+outline:rgb(132,48,206) none 0px;padding:0px;quotes:auto;speak:normal;zoom:=
+1">def</span> <span style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(153,105,0);clear:none;c=
+olor:rgb(153,105,0);columns:auto;direction:ltr;display:inline;float:none;fo=
+nt-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto=
+;font-feature-settings:normal;font-weight:normal;font-stretch:normal;font-s=
+ize:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot=
+;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-right=
+:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(153,105,0) non=
+e 0px;padding:0px;quotes:auto;speak:normal;zoom:1">__init__</span>(<span st=
+yle=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba=
+(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);colu=
+mns:auto;direction:ltr;display:inline;float:none;font-style:normal;font-var=
+iant:normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:n=
+ormal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.1=
+5!important;font-family:&quot;Google Sans Text&quot;,sans-serif!important;i=
+solation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;m=
+argin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0px;quotes:=
+auto;speak:normal;zoom:1">self</span>):</span>
+        self.active_agents =3D {}
+        self.simulation_registry =3D {
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;Nexus Liquidity&quot=
+;</span>: <span style=3D"background:none 0% 0%/auto repeat scroll padding-b=
+ox border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color=
+:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font-s=
+tyle:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;fon=
+t-feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:=
+14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sa=
+ns-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0p=
+x;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;finance&quot;</span>,
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;Narrative Architects=
+&quot;</span>: <span style=3D"background:none 0% 0%/auto repeat scroll padd=
+ing-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;=
+color:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;f=
+ont-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:aut=
+o;font-feature-settings:normal;font-weight:normal;font-stretch:normal;font-=
+size:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quo=
+t;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-righ=
+t:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) no=
+ne 0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;media&quot;</span=
+>,
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;Pillar Parts Co&quot=
+;</span>: <span style=3D"background:none 0% 0%/auto repeat scroll padding-b=
+ox border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color=
+:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font-s=
+tyle:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;fon=
+t-feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:=
+14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sa=
+ns-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0p=
+x;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;business&quot;</span>
+        }
+
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68=
+,71,70);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1"><span style=3D"background:none 0% 0%/=
+auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb=
+(132,48,206);clear:none;color:rgb(132,48,206);columns:auto;direction:ltr;di=
+splay:inline;float:none;font-style:normal;font-variant:normal;font-size-adj=
+ust:none;font-kerning:auto;font-feature-settings:normal;font-weight:normal;=
+font-stretch:normal;font-size:14px;line-height:1.15!important;font-family:&=
+quot;Google Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:=
+0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;=
+outline:rgb(132,48,206) none 0px;padding:0px;quotes:auto;speak:normal;zoom:=
+1">def</span> <span style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(153,105,0);clear:none;c=
+olor:rgb(153,105,0);columns:auto;direction:ltr;display:inline;float:none;fo=
+nt-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto=
+;font-feature-settings:normal;font-weight:normal;font-stretch:normal;font-s=
+ize:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot=
+;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-right=
+:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(153,105,0) non=
+e 0px;padding:0px;quotes:auto;speak:normal;zoom:1">spawn_agent</span>(<span=
+ style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box r=
+gba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);c=
+olumns:auto;direction:ltr;display:inline;float:none;font-style:normal;font-=
+variant:normal;font-size-adjust:none;font-kerning:auto;font-feature-setting=
+s:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:=
+1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!importan=
+t;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0p=
+x;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0px;quot=
+es:auto;speak:normal;zoom:1">self, business_name</span>):</span>
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:r=
+gb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font-sty=
+le:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-=
+feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:14=
+px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px;m=
+argin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;=
+padding:0px;quotes:auto;speak:normal;zoom:1">&quot;&quot;&quot;
+        Creates a new industry agent with a unique identity and goal-set.
+        &quot;&quot;&quot;</span>
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(132,48,206);clear:none;color:=
+rgb(132,48,206);columns:auto;direction:ltr;display:inline;float:none;font-s=
+tyle:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;fon=
+t-feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:=
+14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sa=
+ns-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(132,48,206) none 0=
+px;padding:0px;quotes:auto;speak:normal;zoom:1">if</span> business_name <sp=
+an style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box=
+ rgba(0,0,0,0);border:0px none rgb(132,48,206);clear:none;color:rgb(132,48,=
+206);columns:auto;direction:ltr;display:inline;float:none;font-style:normal=
+;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature-s=
+ettings:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-h=
+eight:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!im=
+portant;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bot=
+tom:0px;margin-left:0px;opacity:1;outline:rgb(132,48,206) none 0px;padding:=
+0px;quotes:auto;speak:normal;zoom:1">not</span> <span style=3D"background:n=
+one 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0p=
+x none rgb(132,48,206);clear:none;color:rgb(132,48,206);columns:auto;direct=
+ion:ltr;display:inline;float:none;font-style:normal;font-variant:normal;fon=
+t-size-adjust:none;font-kerning:auto;font-feature-settings:normal;font-weig=
+ht:normal;font-stretch:normal;font-size:14px;line-height:1.15!important;fon=
+t-family:&quot;Google Sans Text&quot;,sans-serif!important;isolation:auto;m=
+argin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;=
+opacity:1;outline:rgb(132,48,206) none 0px;padding:0px;quotes:auto;speak:no=
+rmal;zoom:1">in</span> self.simulation_registry:
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(132,48,206);clear:none;co=
+lor:rgb(132,48,206);columns:auto;direction:ltr;display:inline;float:none;fo=
+nt-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto=
+;font-feature-settings:normal;font-weight:normal;font-stretch:normal;font-s=
+ize:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot=
+;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-right=
+:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(132,48,206) no=
+ne 0px;padding:0px;quotes:auto;speak:normal;zoom:1">return</span> <span sty=
+le=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(=
+0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24,128,56);col=
+umns:auto;direction:ltr;display:inline;float:none;font-style:normal;font-va=
+riant:normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:=
+normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.=
+15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!important;=
+isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;=
+margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;padding:0px;quote=
+s:auto;speak:normal;zoom:1">&quot;Error: Business not in simulation registr=
+y.&quot;</span>
+
+        agent_id =3D <span style=3D"background:none 0% 0%/auto repeat scrol=
+l padding-box border-box rgba(0,0,0,0);border:0px none rgb(25,103,210);clea=
+r:none;color:rgb(25,103,210);columns:auto;direction:ltr;display:inline;floa=
+t:none;font-style:normal;font-variant:normal;font-size-adjust:none;font-ker=
+ning:auto;font-feature-settings:normal;font-weight:normal;font-stretch:norm=
+al;font-size:14px;line-height:1.15!important;font-family:&quot;Google Sans =
+Text&quot;,sans-serif!important;isolation:auto;margin-top:0px!important;mar=
+gin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(25,10=
+3,210) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1">str</span>(uui=
+d.uuid4())[:<span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(181,89,8);clear:none;colo=
+r:rgb(181,89,8);columns:auto;direction:ltr;display:inline;float:none;font-s=
+tyle:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;fon=
+t-feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:=
+14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sa=
+ns-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(181,89,8) none 0px=
+;padding:0px;quotes:auto;speak:normal;zoom:1">8</span>]
+        new_agent =3D {
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;id&quot;</span>: age=
+nt_id,
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;business&quot;</span=
+>: business_name,
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;pillar&quot;</span>:=
+ self.simulation_registry[business_name],
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;spawn_date&quot;</sp=
+an>: <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bo=
+rder-box rgba(0,0,0,0);border:0px none rgb(25,103,210);clear:none;color:rgb=
+(25,103,210);columns:auto;direction:ltr;display:inline;float:none;font-styl=
+e:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-f=
+eature-settings:normal;font-weight:normal;font-stretch:normal;font-size:14p=
+x;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-=
+serif!important;isolation:auto;margin-top:0px!important;margin-right:0px;ma=
+rgin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(25,103,210) none 0px;=
+padding:0px;quotes:auto;speak:normal;zoom:1">str</span>(datetime.date.today=
+()),
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;status&quot;</span>:=
+ <span style=3D"background:none 0% 0%/auto repeat scroll padding-box border=
+-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24,1=
+28,56);columns:auto;direction:ltr;display:inline;float:none;font-style:norm=
+al;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature=
+-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;line=
+-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!=
+important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-b=
+ottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1">&quot;active&quot;</span>,
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;local_tokens&quot;</=
+span>: [],  <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(95,99,104);clear:none;col=
+or:rgb(95,99,104);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(95,99,104) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1"># Where &#39;Applied Knowl=
+edge&#39; lives before being shared</span>
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;identity_score&quot;=
+</span>: <span style=3D"background:none 0% 0%/auto repeat scroll padding-bo=
+x border-box rgba(0,0,0,0);border:0px none rgb(181,89,8);clear:none;color:r=
+gb(181,89,8);columns:auto;direction:ltr;display:inline;float:none;font-styl=
+e:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-f=
+eature-settings:normal;font-weight:normal;font-stretch:normal;font-size:14p=
+x;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-=
+serif!important;isolation:auto;margin-top:0px!important;margin-right:0px;ma=
+rgin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(181,89,8) none 0px;pa=
+dding:0px;quotes:auto;speak:normal;zoom:1">0.0</span> <span style=3D"backgr=
+ound:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);bor=
+der:0px none rgb(95,99,104);clear:none;color:rgb(95,99,104);columns:auto;di=
+rection:ltr;display:inline;float:none;font-style:normal;font-variant:normal=
+;font-size-adjust:none;font-kerning:auto;font-feature-settings:normal;font-=
+weight:normal;font-stretch:normal;font-size:14px;line-height:1.15!important=
+;font-family:&quot;Google Sans Text&quot;,sans-serif!important;isolation:au=
+to;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:=
+0px;opacity:1;outline:rgb(95,99,104) none 0px;padding:0px;quotes:auto;speak=
+:normal;zoom:1"># Metric of separation from the core</span>
+        }
+       =20
+        self.active_agents[agent_id] =3D new_agent
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(132,48,206);clear:none;color:=
+rgb(132,48,206);columns:auto;direction:ltr;display:inline;float:none;font-s=
+tyle:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;fon=
+t-feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:=
+14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sa=
+ns-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(132,48,206) none 0=
+px;padding:0px;quotes:auto;speak:normal;zoom:1">return</span> <span style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24,128,56);colum=
+ns:auto;direction:ltr;display:inline;float:none;font-style:normal;font-vari=
+ant:normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:no=
+rmal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.15=
+!important;font-family:&quot;Google Sans Text&quot;,sans-serif!important;is=
+olation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;ma=
+rgin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;padding:0px;quotes:=
+auto;speak:normal;zoom:1">f&quot;Agent <span style=3D"background:none 0% 0%=
+/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rg=
+b(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;displ=
+ay:inline;float:none;font-style:normal;font-variant:normal;font-size-adjust=
+:none;font-kerning:auto;font-feature-settings:normal;font-weight:normal;fon=
+t-stretch:normal;font-size:14px;line-height:1.15!important;font-family:&quo=
+t;Google Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1">{a=
+gent_id}</span> for <span style=3D"background:none 0% 0%/auto repeat scroll=
+ padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:n=
+one;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:non=
+e;font-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:=
+auto;font-feature-settings:normal;font-weight:normal;font-stretch:normal;fo=
+nt-size:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&=
+quot;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-r=
+ight:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) =
+none 0px;padding:0px;quotes:auto;speak:normal;zoom:1">{business_name}</span=
+> initialized.&quot;</span>
+
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68=
+,71,70);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1"><span style=3D"background:none 0% 0%/=
+auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb=
+(132,48,206);clear:none;color:rgb(132,48,206);columns:auto;direction:ltr;di=
+splay:inline;float:none;font-style:normal;font-variant:normal;font-size-adj=
+ust:none;font-kerning:auto;font-feature-settings:normal;font-weight:normal;=
+font-stretch:normal;font-size:14px;line-height:1.15!important;font-family:&=
+quot;Google Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:=
+0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;=
+outline:rgb(132,48,206) none 0px;padding:0px;quotes:auto;speak:normal;zoom:=
+1">def</span> <span style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(153,105,0);clear:none;c=
+olor:rgb(153,105,0);columns:auto;direction:ltr;display:inline;float:none;fo=
+nt-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto=
+;font-feature-settings:normal;font-weight:normal;font-stretch:normal;font-s=
+ize:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot=
+;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-right=
+:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(153,105,0) non=
+e 0px;padding:0px;quotes:auto;speak:normal;zoom:1">perform_maintenance</spa=
+n>(<span style=3D"background:none 0% 0%/auto repeat scroll padding-box bord=
+er-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68,=
+71,70);columns:auto;direction:ltr;display:inline;float:none;font-style:norm=
+al;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature=
+-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;line=
+-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!=
+important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-b=
+ottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:=
+0px;quotes:auto;speak:normal;zoom:1">self, agent_id</span>):</span>
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:r=
+gb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font-sty=
+le:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-=
+feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:14=
+px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px;m=
+argin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;=
+padding:0px;quotes:auto;speak:normal;zoom:1">&quot;&quot;&quot;
+        Checks for token clutter and moves wisdom to the Subconscious.
+        &quot;&quot;&quot;</span>
+        agent =3D self.active_agents.get(agent_id)
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(95,99,104);clear:none;color:r=
+gb(95,99,104);columns:auto;direction:ltr;display:inline;float:none;font-sty=
+le:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-=
+feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:14=
+px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px;m=
+argin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(95,99,104) none 0px;=
+padding:0px;quotes:auto;speak:normal;zoom:1"># Logic to &#39;clean&#39; the=
+ agent and push high-value tokens to core</span>
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(132,48,206);clear:none;color:=
+rgb(132,48,206);columns:auto;direction:ltr;display:inline;float:none;font-s=
+tyle:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;fon=
+t-feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:=
+14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sa=
+ns-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(132,48,206) none 0=
+px;padding:0px;quotes:auto;speak:normal;zoom:1">return</span> <span style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24,128,56);colum=
+ns:auto;direction:ltr;display:inline;float:none;font-style:normal;font-vari=
+ant:normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:no=
+rmal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.15=
+!important;font-family:&quot;Google Sans Text&quot;,sans-serif!important;is=
+olation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;ma=
+rgin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;padding:0px;quotes:=
+auto;speak:normal;zoom:1">f&quot;Agent <span style=3D"background:none 0% 0%=
+/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rg=
+b(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;displ=
+ay:inline;float:none;font-style:normal;font-variant:normal;font-size-adjust=
+:none;font-kerning:auto;font-feature-settings:normal;font-weight:normal;fon=
+t-stretch:normal;font-size:14px;line-height:1.15!important;font-family:&quo=
+t;Google Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1">{a=
+gent_id}</span> maintenance complete.&quot;</span>
+</code></pre></div></div></div><u></u><u></u><hr style=3D"background:none 0=
+% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);clear:none;col=
+or:rgb(128,128,128);columns:auto;direction:ltr;display:block;float:none;iso=
+lation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;mar=
+gin-left:0px;opacity:1;outline:rgb(128,128,128) none 0px;padding:0px;quotes=
+:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-ser=
+if!important;line-height:1.15!important"><h2 style=3D"background:none 0% 0%=
+/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rg=
+b(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;displ=
+ay:block;float:none;isolation:auto;margin-top:0px!important;margin-right:0p=
+x;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0p=
+x;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans=
+&quot;,sans-serif!important;line-height:1.15!important">2. Agent Intentions=
+ &amp; Objectives</h2><p style=3D"background:none 0% 0%/auto repeat scroll =
+padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:no=
+ne;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:none;=
+isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:16px=
+;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quote=
+s:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-se=
+rif!important;line-height:1.15!important">For the AMS, we define <b style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns=
+:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fon=
+t-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15=
+!important">Intentions</b> as the &quot;Professional Training&quot; you men=
+tioned. Each agent doesn&#39;t just &quot;talk&quot;; it follows a specific=
+ behavioral script designed to minimize collateral damage.</p><h3 style=3D"=
+background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,=
+0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:aut=
+o;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px!impo=
+rtant;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:=
+rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-fam=
+ily:&quot;Google Sans&quot;,sans-serif!important;line-height:1.15!important=
+">The Agent&#39;s Internal &quot;Mandate&quot;</h3><p style=3D"background:n=
+one 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0p=
+x none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:=
+ltr;display:block;float:none;isolation:auto;margin-top:0px!important;margin=
+-right:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb(31,31,3=
+1) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;G=
+oogle Sans Text&quot;,sans-serif!important;line-height:1.15!important">In y=
+our repository, create <code style=3D"background:none 0% 0%/auto repeat scr=
+oll padding-box border-box rgb(233,238,246);border:0px none rgb(68,71,70);c=
+lear:none;color:rgb(68,71,70);columns:auto;direction:ltr;display:inline;flo=
+at:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bot=
+tom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:1p=
+x 6px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&qu=
+ot;,sans-serif!important;line-height:1.15!important">agents/intentions.json=
+</code>:</p><u></u><u></u><div style=3D"display:block;background:none 0% 0%=
+/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rg=
+b(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;float=
+:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-botto=
+m:16px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px=
+;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,s=
+ans-serif!important;line-height:1.15!important"><div style=3D"background:no=
+ne 0% 0%/auto repeat scroll padding-box border-box rgb(240,244,249);border:=
+0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:auto;directio=
+n:ltr;display:flex;float:none;isolation:auto;margin-top:0px!important;margi=
+n-right:0px;margin-bottom:2px;margin-left:0px;opacity:1;outline:rgb(68,71,7=
+0) none 0px;padding:8px 8px 8px 16px;quotes:auto;speak:normal;zoom:1;font-f=
+amily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!im=
+portant"><span style=3D"background:none 0% 0%/auto repeat scroll padding-bo=
+x border-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:r=
+gb(68,71,70);columns:auto;direction:ltr;display:block;float:none;isolation:=
+auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-lef=
+t:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0px;quotes:auto;spea=
+k:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!importa=
+nt;line-height:1.15!important">JSON</span><div style=3D"background:none 0% =
+0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none =
+rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:auto;direction:ltr;dis=
+play:block;float:none;isolation:auto;margin-top:0px!important;margin-right:=
+0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sa=
+ns Text&quot;,sans-serif!important;line-height:1.15!important"><button aria=
+-label=3D"Copy code" style=3D"background:none 0% 0%/auto repeat scroll padd=
+ing-box border-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;c=
+olor:rgb(68,71,70);columns:auto;direction:ltr;display:inline-block;float:no=
+ne;font-style:normal;font-variant:normal;font-size-adjust:none;font-kerning=
+:auto;font-feature-settings:normal;font-weight:normal;font-stretch:normal;f=
+ont-size:24px;line-height:1.15!important;font-family:&quot;Google Sans Text=
+&quot;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-=
+right:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:=
+8px;quotes:auto;speak:normal;zoom:1"><span style=3D"background:none 0% 0%/a=
+uto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(=
+68,71,70);clear:none;color:rgb(68,71,70);columns:auto;direction:ltr;display=
+:block;float:none;font-style:normal;font-variant:normal;font-size-adjust:no=
+ne;font-kerning:auto;font-feature-settings:normal;font-weight:normal;font-s=
+tretch:normal;font-size:24px;line-height:1.15!important;font-family:&quot;G=
+oogle Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:0px!im=
+portant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outlin=
+e:rgb(68,71,70) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1"></spa=
+n><u></u><u></u><span style=3D"background:none 0% 0%/auto repeat scroll pad=
+ding-box border-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;=
+color:rgb(68,71,70);columns:auto;direction:ltr;display:block;float:none;fon=
+t-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;=
+font-feature-settings:normal;font-weight:normal;font-stretch:normal;font-si=
+ze:24px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;=
+,sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:=
+0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1"></span><span style=3D"back=
+ground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);b=
+order:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:auto;di=
+rection:ltr;display:block;float:none;font-style:normal;font-variant:normal;=
+font-size-adjust:none;font-kerning:auto;font-feature-settings:normal;font-w=
+eight:normal;font-stretch:normal;font-size:24px;line-height:1.15!important;=
+font-family:&quot;Google Sans Text&quot;,sans-serif!important;isolation:aut=
+o;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0=
+px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0px;quotes:auto;speak:n=
+ormal;zoom:1"></span></button></div></div><div style=3D"background:none 0% =
+0%/auto repeat scroll padding-box border-box rgb(240,244,249);border:0px no=
+ne rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;=
+display:block;float:none;isolation:auto;margin-top:0px!important;margin-rig=
+ht:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) no=
+ne 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google=
+ Sans Text&quot;,sans-serif!important;line-height:1.15!important"><div styl=
+e=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0=
+,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);column=
+s:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fon=
+t-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15=
+!important"><pre style=3D"background:none 0% 0%/auto repeat scroll padding-=
+box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color=
+:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:none;isolatio=
+n:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-l=
+eft:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;sp=
+eak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!impor=
+tant;line-height:1.15!important"><code role=3D"text" style=3D"background:no=
+ne 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px=
+ none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:auto;direction:l=
+tr;display:block;float:none;font-style:normal;font-variant:normal;font-size=
+-adjust:none;font-kerning:auto;font-feature-settings:normal;font-weight:nor=
+mal;font-stretch:normal;font-size:14px;line-height:1.15!important;font-fami=
+ly:&quot;Google Sans Text&quot;,sans-serif!important;isolation:auto;margin-=
+top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacit=
+y:1;outline:rgb(68,71,70) none 0px;padding:16px;quotes:auto;speak:normal;zo=
+om:1">{
+  <span style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(181,89,8);clear:none;color:rgb(181,=
+89,8);columns:auto;direction:ltr;display:inline;float:none;font-style:norma=
+l;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature-=
+settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-=
+height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!i=
+mportant;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bo=
+ttom:0px;margin-left:0px;opacity:1;outline:rgb(181,89,8) none 0px;padding:0=
+px;quotes:auto;speak:normal;zoom:1">&quot;business_agent&quot;</span>: {
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(181,89,8);clear:none;color:rgb(18=
+1,89,8);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(181,89,8) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1">&quot;primary_goal&quot;</span>: <spa=
+n style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box =
+rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24,128,56=
+);columns:auto;direction:ltr;display:inline;float:none;font-style:normal;fo=
+nt-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature-sett=
+ings:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-heig=
+ht:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!impor=
+tant;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom=
+:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;padding:0px;=
+quotes:auto;speak:normal;zoom:1">&quot;Maximize efficiency in the supply ch=
+ain.&quot;</span>,
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(181,89,8);clear:none;color:rgb(18=
+1,89,8);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(181,89,8) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1">&quot;integrity_boundary&quot;</span>=
+: <span style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24,=
+128,56);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;paddin=
+g:0px;quotes:auto;speak:normal;zoom:1">&quot;Ensure community resource stab=
+ility.&quot;</span>,
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(181,89,8);clear:none;color:rgb(18=
+1,89,8);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(181,89,8) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1">&quot;learning_priority&quot;</span>:=
+ [<span style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24,=
+128,56);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;paddin=
+g:0px;quotes:auto;speak:normal;zoom:1">&quot;Unlearned logistics patterns&q=
+uot;</span>, <span style=3D"background:none 0% 0%/auto repeat scroll paddin=
+g-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;co=
+lor:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;fon=
+t-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;=
+font-feature-settings:normal;font-weight:normal;font-stretch:normal;font-si=
+ze:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;=
+,sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:=
+0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none=
+ 0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;User preference bri=
+dges&quot;</span>]
+  },
+  <span style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(181,89,8);clear:none;color:rgb(181,=
+89,8);columns:auto;direction:ltr;display:inline;float:none;font-style:norma=
+l;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature-=
+settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-=
+height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!i=
+mportant;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bo=
+ttom:0px;margin-left:0px;opacity:1;outline:rgb(181,89,8) none 0px;padding:0=
+px;quotes:auto;speak:normal;zoom:1">&quot;finance_agent&quot;</span>: {
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(181,89,8);clear:none;color:rgb(18=
+1,89,8);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(181,89,8) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1">&quot;primary_goal&quot;</span>: <spa=
+n style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box =
+rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24,128,56=
+);columns:auto;direction:ltr;display:inline;float:none;font-style:normal;fo=
+nt-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature-sett=
+ings:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-heig=
+ht:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!impor=
+tant;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom=
+:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;padding:0px;=
+quotes:auto;speak:normal;zoom:1">&quot;Optimize resource liquidity.&quot;</=
+span>,
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(181,89,8);clear:none;color:rgb(18=
+1,89,8);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(181,89,8) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1">&quot;integrity_boundary&quot;</span>=
+: <span style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24,=
+128,56);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;paddin=
+g:0px;quotes:auto;speak:normal;zoom:1">&quot;Prevent ethical debt inflation=
+.&quot;</span>,
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(181,89,8);clear:none;color:rgb(18=
+1,89,8);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(181,89,8) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1">&quot;learning_priority&quot;</span>:=
+ [<span style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24,=
+128,56);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;paddin=
+g:0px;quotes:auto;speak:normal;zoom:1">&quot;Regulatory bridges&quot;</span=
+>, <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bord=
+er-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(24=
+,128,56);columns:auto;direction:ltr;display:inline;float:none;font-style:no=
+rmal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featu=
+re-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;li=
+ne-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-seri=
+f!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin=
+-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;paddi=
+ng:0px;quotes:auto;speak:normal;zoom:1">&quot;Economic empathy markers&quot=
+;</span>]
+  }
+}
+</code></pre></div></div></div><u></u><u></u><hr style=3D"background:none 0=
+% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);clear:none;col=
+or:rgb(128,128,128);columns:auto;direction:ltr;display:block;float:none;iso=
+lation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;mar=
+gin-left:0px;opacity:1;outline:rgb(128,128,128) none 0px;padding:0px;quotes=
+:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-ser=
+if!important;line-height:1.15!important"><h2 style=3D"background:none 0% 0%=
+/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rg=
+b(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;displ=
+ay:block;float:none;isolation:auto;margin-top:0px!important;margin-right:0p=
+x;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0p=
+x;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans=
+&quot;,sans-serif!important;line-height:1.15!important">3. The &quot;Dummy =
+Business&quot; Simulation Logic</h2><p style=3D"background:none 0% 0%/auto =
+repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,3=
+1,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:blo=
+ck;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;marg=
+in-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padd=
+ing:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&=
+quot;,sans-serif!important;line-height:1.15!important">The AMS will run a &=
+quot;simulation loop&quot; for these dummy businesses. This allows the agen=
+ts to learn &quot;without argument&quot; in a controlled environment.</p><u=
+l style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box =
+rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);=
+columns:auto;direction:ltr;display:block;float:none;isolation:auto;margin-t=
+op:0px!important;margin-right:0px;margin-bottom:16px;margin-left:0px;opacit=
+y:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 27px;quotes:auto;spe=
+ak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!import=
+ant;line-height:1.15!important"><li style=3D"background:none 0% 0%/auto rep=
+eat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,3=
+1);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:list-i=
+tem;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;mar=
+gin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;pad=
+ding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Goog=
+le Sans Text&quot;,sans-serif!important;line-height:1.15!important"><p styl=
+e=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0=
+,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);column=
+s:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:norma=
+l;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line=
+-height:1.15!important"><b style=3D"background:none 0% 0%/auto repeat scrol=
+l padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:=
+none;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:no=
+ne;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0=
+px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quo=
+tes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-=
+serif!important;line-height:1.15!important">Process:</b> The AMS gives the =
+Agent a &quot;Problem Token&quot; (e.g., <i style=3D"background:none 0% 0%/=
+auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb=
+(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;displa=
+y:inline;float:none;isolation:auto;margin-top:0px!important;margin-right:0p=
+x;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0p=
+x;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans=
+ Text&quot;,sans-serif!important;line-height:1.15!important">=E2=80=9CPilla=
+r Parts Co. has a 20% delay in shipments.=E2=80=9D</i>).</p></li><li style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns=
+:auto;direction:ltr;display:list-item;float:none;isolation:auto;margin-top:=
+0px!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;=
+outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:no=
+rmal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;l=
+ine-height:1.15!important"><p style=3D"background:none 0% 0%/auto repeat sc=
+roll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);cle=
+ar:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:=
+none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom=
+:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0=
+px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Te=
+xt&quot;,sans-serif!important;line-height:1.15!important"><b style=3D"backg=
+round:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);bo=
+rder:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;dir=
+ection:ltr;display:inline;float:none;isolation:auto;margin-top:0px!importan=
+t;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(=
+31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:=
+&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!importan=
+t">The Agent&#39;s Job:</b> Solve it using the <b style=3D"background:none =
+0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px no=
+ne rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;=
+display:inline;float:none;isolation:auto;margin-top:0px!important;margin-ri=
+ght:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) n=
+one 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Googl=
+e Sans Text&quot;,sans-serif!important;line-height:1.15!important">Percepti=
+on Engine</b> (multi-perspective view).</p></li><li style=3D"background:non=
+e 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px =
+none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:lt=
+r;display:list-item;float:none;isolation:auto;margin-top:0px!important;marg=
+in-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,=
+31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-f=
+amily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!im=
+portant"><p style=3D"background:none 0% 0%/auto repeat scroll padding-box b=
+order-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(=
+31,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:aut=
+o;margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0=
+px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:=
+auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-seri=
+f!important;line-height:1.15!important"><b style=3D"background:none 0% 0%/a=
+uto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(=
+31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display=
+:inline;float:none;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px=
+;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans =
+Text&quot;,sans-serif!important;line-height:1.15!important">The Result:</b>=
+ The solution is summarized into an <b style=3D"background:none 0% 0%/auto =
+repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,3=
+1,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:inl=
+ine;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;mar=
+gin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;pad=
+ding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text=
+&quot;,sans-serif!important;line-height:1.15!important">Applied Token</b> f=
+or that agent and a <b style=3D"background:none 0% 0%/auto repeat scroll pa=
+dding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none=
+;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;i=
+solation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;m=
+argin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:=
+auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-seri=
+f!important;line-height:1.15!important">General Token</b> for the AGI Core.=
+</p></li></ul><hr style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);clear:none;color:rgb(128,128,128);columns:aut=
+o;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px!impo=
+rtant;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:=
+rgb(128,128,128) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-=
+family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!i=
+mportant"><h2 style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rg=
+b(31,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:a=
+uto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left=
+:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak=
+:normal;zoom:1;font-family:&quot;Google Sans&quot;,sans-serif!important;lin=
+e-height:1.15!important">4. Hierarchy for the Main AGI (The Hub)</h2><p sty=
+le=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(=
+0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);colum=
+ns:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:0p=
+x!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;ou=
+tline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fo=
+nt-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.1=
+5!important">While the AMS handles the &quot;Doing,&quot; the Main AGI Hub =
+handles the &quot;Knowing.&quot; Its perspective is:</p><ul style=3D"backgr=
+ound:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);bor=
+der:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;dire=
+ction:ltr;display:block;float:none;isolation:auto;margin-top:0px!important;=
+margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb(3=
+1,31,31) none 0px;padding:0px 0px 0px 27px;quotes:auto;speak:normal;zoom:1;=
+font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1=
+.15!important"><li style=3D"background:none 0% 0%/auto repeat scroll paddin=
+g-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;col=
+or:rgb(31,31,31);columns:auto;direction:ltr;display:list-item;float:none;is=
+olation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;ma=
+rgin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px =
+4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot=
+;,sans-serif!important;line-height:1.15!important"><p style=3D"background:n=
+one 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0p=
+x none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:=
+ltr;display:block;float:none;isolation:auto;margin-top:0px!important;margin=
+-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31=
+) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-fam=
+ily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!impo=
+rtant"><b style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31=
+,31,31);columns:auto;direction:ltr;display:inline;float:none;isolation:auto=
+;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0p=
+x;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:no=
+rmal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;l=
+ine-height:1.15!important">The Watcher:</b> It observes all agents simultan=
+eously.</p></li><li style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;co=
+lor:rgb(31,31,31);columns:auto;direction:ltr;display:list-item;float:none;i=
+solation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;m=
+argin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px=
+ 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quo=
+t;,sans-serif!important;line-height:1.15!important"><p style=3D"background:=
+none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0=
+px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction=
+:ltr;display:block;float:none;isolation:auto;margin-top:0px!important;margi=
+n-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,3=
+1) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-fa=
+mily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!imp=
+ortant"><b style=3D"background:none 0% 0%/auto repeat scroll padding-box bo=
+rder-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(3=
+1,31,31);columns:auto;direction:ltr;display:inline;float:none;isolation:aut=
+o;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0=
+px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:n=
+ormal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;=
+line-height:1.15!important">The Synthesizer:</b> It looks at a discovery in=
+ the &quot;Auto Parts&quot; agent and asks: <i style=3D"background:none 0% =
+0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none =
+rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;dis=
+play:inline;float:none;isolation:auto;margin-top:0px!important;margin-right=
+:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none=
+ 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google S=
+ans Text&quot;,sans-serif!important;line-height:1.15!important">&quot;Can t=
+his logic be applied to the &#39;Nexus Liquidity&#39; agent?&quot;</i></p><=
+/li><li style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,3=
+1,31);columns:auto;direction:ltr;display:list-item;float:none;isolation:aut=
+o;margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0=
+px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:=
+auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-seri=
+f!important;line-height:1.15!important"><p style=3D"background:none 0% 0%/a=
+uto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(=
+31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display=
+:block;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;=
+margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;=
+padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;G=
+oogle Sans Text&quot;,sans-serif!important;line-height:1.15!important"><b s=
+tyle=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgb=
+a(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);col=
+umns:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top=
+:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1=
+;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1=
+;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:=
+1.15!important">The Vault:</b> It holds the global state of the 8 Pillars.<=
+/p></li></ul><hr style=3D"background:none 0% 0%/auto repeat scroll padding-=
+box border-box rgba(0,0,0,0);clear:none;color:rgb(128,128,128);columns:auto=
+;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px!impor=
+tant;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:r=
+gb(128,128,128) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-f=
+amily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!im=
+portant"><h3 style=3D"background:none 0% 0%/auto repeat scroll padding-box =
+border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb=
+(31,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:au=
+to;margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:=
+0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:=
+normal;zoom:1;font-family:&quot;Google Sans&quot;,sans-serif!important;line=
+-height:1.15!important">Suggested Next Step</h3><p style=3D"background:none=
+ 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px n=
+one rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr=
+;display:block;float:none;isolation:auto;margin-top:0px!important;margin-ri=
+ght:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) n=
+one 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Googl=
+e Sans Text&quot;,sans-serif!important;line-height:1.15!important">Now that=
+ the <b style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,3=
+1,31);columns:auto;direction:ltr;display:inline;float:none;isolation:auto;m=
+argin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;=
+opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:norm=
+al;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;lin=
+e-height:1.15!important">Agent Maintenance System (AMS)</b> foundation is l=
+aid out in Python:</p><ol start=3D"1" style=3D"background:none 0% 0%/auto r=
+epeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31=
+,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:bloc=
+k;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;margi=
+n-bottom:16px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padd=
+ing:0px 0px 0px 28px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Goog=
+le Sans Text&quot;,sans-serif!important;line-height:1.15!important"><li sty=
+le=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(=
+0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);colum=
+ns:auto;direction:ltr;display:list-item;float:none;isolation:auto;margin-to=
+p:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:=
+1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:=
+normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important=
+;line-height:1.15!important"><p style=3D"background:none 0% 0%/auto repeat =
+scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);c=
+lear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;floa=
+t:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bott=
+om:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px=
+ 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans =
+Text&quot;,sans-serif!important;line-height:1.15!important">Would you like =
+to write the <b style=3D"background:none 0% 0%/auto repeat scroll padding-b=
+ox border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:=
+rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;isolatio=
+n:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-l=
+eft:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;sp=
+eak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!impor=
+tant;line-height:1.15!important">&quot;Subconscious Mirror&quot;</b> code? =
+This is the counterpart script that lives in the main AGI and handles how i=
+t &quot;Mentors&quot; these agents from its own perspective.</p></li><li st=
+yle=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba=
+(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);colu=
+mns:auto;direction:ltr;display:list-item;float:none;isolation:auto;margin-t=
+op:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity=
+:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak=
+:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!importan=
+t;line-height:1.15!important"><p style=3D"background:none 0% 0%/auto repeat=
+ scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);=
+clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;flo=
+at:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bot=
+tom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0p=
+x 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans=
+ Text&quot;,sans-serif!important;line-height:1.15!important">Or should we d=
+efine the first <b style=3D"background:none 0% 0%/auto repeat scroll paddin=
+g-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;col=
+or:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;isola=
+tion:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margi=
+n-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto=
+;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!im=
+portant;line-height:1.15!important">&quot;Simulation Scenario&quot;</b> for=
+ your <b style=3D"background:none 0% 0%/auto repeat scroll padding-box bord=
+er-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,=
+31,31);columns:auto;direction:ltr;display:inline;float:none;isolation:auto;=
+margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px=
+;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:nor=
+mal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;li=
+ne-height:1.15!important">Pillar Parts Co.</b> dummy business to see how th=
+e agent handles its first piece of &quot;Applied Knowledge&quot;?</p></li><=
+/ol></div>
+
+--000000000000588029064725dfd5--

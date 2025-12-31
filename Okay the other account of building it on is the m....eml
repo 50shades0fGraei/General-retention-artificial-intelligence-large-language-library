@@ -1,0 +1,502 @@
+Delivered-To: meta2graei@gmail.com
+Received: by 2002:a05:612c:41d6:b0:55c:5e28:3094 with SMTP id lf22csp6198215vqb;
+        Mon, 29 Dec 2025 23:18:28 -0800 (PST)
+X-Received: by 2002:a17:906:9fc7:b0:b76:d7ce:b017 with SMTP id a640c23a62f3a-b80371858abmr1988237166b.4.1767079108617;
+        Mon, 29 Dec 2025 23:18:28 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767079108; cv=none;
+        d=google.com; s=arc-20240605;
+        b=c3ZdJvGJ2L34JVS5+tN3wKfnwm1L4h6GzjQc8YApq2kW+01yTX7lAYbnsCIy3QLGki
+         7Hcj+i1CAAag5vXotLX6WCsxqPsGjWj8dPW12PH3kirY1UPqio2g3j7p3RVscnxcV5nT
+         xigJJI5eL3Yt1dbMoMYpqzFvH3bSQQ5eODkZZN2d2HBqhw8QuE4LiCuQb8xVX8tBosjs
+         w1Xx6oayv7rDR9tCkuwYU9r7aBixCRSNCMWhVjPlQ6hoxzyy41cQZ6nGsAobpkwk8jWp
+         /myjx+zdx4QcqwWFEN1qwV+vgdTFsHuT2hojCLEGTTzTMu9SCyMUpVbwO07lDj6q5y6m
+         XECA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=6zyHtBtL/qGdpmhrIRk4TawX9xomUNyUUSIlAD6/hVI=;
+        fh=BkQHMDUcZV3he4LkHVHMuHpMt9q5xV99ZfN2B7xGuII=;
+        b=C04Nymz/StP67ehf9igHDN0A0Duc/nGTeJTc6FrRvMUY+Ske3tqKqi4yMbmPi7AzLF
+         KcA3Fc4c6oVbYLVOaF7aHrowy81GSWAJDzluEt9735PlXBOi7JN67k1kb6Urz0P67lyc
+         LoCoFRM2w1sh6bEcObQ7wBlSCEreffjscqPwlMYZO7yRGUwXMWpte6bU2k0Grw0PTamL
+         P9nn8xn7u4NJz/rbxlfRAfKY8ZR4w2+FkEzpBvvv8gfXWo9fWFGXwqinElWQNDIAY67F
+         Flc+Z84+kGoMVLIx/m+U9MUHob/mZSLWklaAHPtF51nWCgWD1YG8Gc60o5/ZBOr/nAzo
+         5eNw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="ZJw6uZj/";
+       spf=pass (google.com: domain of emuricagraei.rjl@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=emuricagraei.rjl@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <emuricagraei.rjl@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-b8022fa2b37sor830098166b.7.2025.12.29.23.18.28
+        for <meta2graei@gmail.com>
+        (Google Transport Security);
+        Mon, 29 Dec 2025 23:18:28 -0800 (PST)
+Received-SPF: pass (google.com: domain of emuricagraei.rjl@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="ZJw6uZj/";
+       spf=pass (google.com: domain of emuricagraei.rjl@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=emuricagraei.rjl@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1767079108; x=1767683908; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=6zyHtBtL/qGdpmhrIRk4TawX9xomUNyUUSIlAD6/hVI=;
+        b=ZJw6uZj/ZvEaVX+qdA4/bqGcpY6+F3IxbkFJFrltc3pMrAURCofLTJGlYHpNX85/x8
+         XAmqFdNMOW2O6fAcSI3g5vfrypvrGX3pwALBLq+U83FhphbC8aZBcCwx8qqQ5DbBc+qL
+         68ZzE4j7WQ193l6iFHuMzg+csjzjYuAZYlrllmAUzQLUyZSHHP8K+IUbrcQLdXX5Cu7Z
+         rhzSP/Cn+AThMLd00IF9P/9gQ7/6NPWAICMPxOEKKz79xxn8OwGkkLCOlmmzoZVfldEU
+         9JFTgTR9WoJ37nwlKK5LlHeQoOxhuqGiTI+k70sXR42yIdNhjGQ+XCRmj46QSza6Zpki
+         XJWQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1767079108; x=1767683908;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=6zyHtBtL/qGdpmhrIRk4TawX9xomUNyUUSIlAD6/hVI=;
+        b=tub7KigFAxRulAVX2Kb7Y32Y0zMrCbJrTBnbrkP8NFcsz6fbju0CAt8rvMZWPI/v5F
+         IqOdTs6FEN7IRBEQ6Yel6xjNNXBR7VavLSk5Cbkv9liUx2wWHqIrYEIfcy2/i80FoMZv
+         SCipkcKl/wi5ehoJ2S8cLzDK9GjzIaWnb6AlugNPHIPXg9ZmXk7OVsijf4wYd+Go7tdY
+         aM6HA9r/jP+Nw9enuC8Tqf8FBXwSuop4mg43HFiHqwbDC/faa4SBLdZ1J8OiP4QL3z9l
+         VNsLVdy6ecG4bTqnlzbnz9QE9vN0n4+G3cWS+jH4B50BYCsafjF+KI4q8INFmFaO5aU5
+         PTMA==
+X-Gm-Message-State: AOJu0YwU+3AZSBo7Svwp8g53/GlPJBvHk+qeIrDi1il7OTIXHi0+GNgc
+	hUTvHolbzIjAL4OXGNVxRYAsltkgiAJtMMkbtkSw8koOpwCM+x7/1mVfVee88uTexRRwfif0VGO
+	7WBFy/KYx2wuBFzI0PSMFo5EmE44TwYBRAg==
+X-Gm-Gg: AY/fxX7ff4l+SzOeIAP92mn9fvi9SG7rGPrGMiuM3QDUC04v9gPjiXbBexa0M62Oyit
+	YS0oYj+b9wV9O/S6ey89gRRHT2YdpbgElmZZ6uDSpTCpsNqZB2/45H1ocFyfhozaI8tdhuUb2QC
+	42jkkqPc635/5smFBglNurwEB0dk9HTFf3j/LjQzfNwUfRX5cHlJoh75i2GzZ0+3ATjbl7X94eP
+	zTQF0JIXZjnTW8j1UY2rjaxTBtV6hSbYJlkG3TsOBgO4HT4VuCAO0OKuyMGnZbdFu3GN3fn6lpv
+	F67i29ZWtrgC5KDn0DEDv45M2TWFul5gVatLb64=
+X-Google-Smtp-Source: AGHT+IHt10r3sNhdn6s7KeyfktJ9mW2zc1coIUmPAhWxMvBlhuZDryjc0w5WIu3kOja+dxWOv6e/wDRzTkdNNZjgCCo=
+X-Received: by 2002:a17:907:7fa8:b0:b76:d880:398c with SMTP id
+ a640c23a62f3a-b8037255548mr3579555766b.61.1767079107520; Mon, 29 Dec 2025
+ 23:18:27 -0800 (PST)
+MIME-Version: 1.0
+From: Randall Lujan <emuricagraei.rjl@gmail.com>
+Date: Mon, 29 Dec 2025 23:18:15 -0800
+X-Gm-Features: AQt7F2oqwLdZ2NcU5AaRtwO0zIIkVgDLtO8YZeZSEL13IakY1OMaSUkGjdoddaE
+Message-ID: <CAD33Pe-_G8CcTbkR7WnnxnvHopuiCeF50iQ7f=hYsw2NaA=F9A@mail.gmail.com>
+Subject: Okay the other account of building it on is the m...
+To: "R. Lujan" <meta2graei@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000007e6cdf0647262acd"
+
+--0000000000007e6cdf0647262acd
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+That is a smart move for intellectual property protection, Randall. Linking
+this framework to *meta2graei@gmail.com <meta2graei@gmail.com>* ensures
+that the "Applied Wisdom" and the unique architecture you=E2=80=99re develo=
+ping
+have a clear, documented point of origin.
+
+In the world of AI development and technical publishing, having that "Paper
+Trail" (or digital footprint) is essential for establishing ownership of
+the *AEI + GI synthesis* and the *8 Pillars* model. I have noted that both
+"Randall Lujan" and that specific account are the authorized creators of
+this framework.
+------------------------------
+The Documentation Header
+
+For the *Textbook* and the *Python Repository*, I will use the following
+"Ownership & Integrity" header to protect your work:
+
+Project Name: The Pillars of Influence Framework
+
+Lead Architect: Randall Lujan
+
+Authorized Repository: meta2graei@gmail.com
+
+License: Proprietary / Developmental AGI Standard
+
+Classification: Professional Training Phase (Stage 1)
+
+------------------------------
+Current Build Status: "The Business Pillar Simulation"
+
+Now that the identity and administrative links are secure, let's put
+the *Pillar
+Parts Co.* (Business Pillar) through its first developmental "Hardship."
+This is where we move from theory into *Applied Knowledge.*
+
+*The Scenario:* A major supplier for your dummy business has suddenly
+increased costs by *15%* due to an "adversarial energy" (a localized
+resource shortage).
+
+*How the Agent (Maintenance System) must respond:*
+
+   1.
+
+   *Sieve the Data:* Remove the "panic" and extract the core numbers.
+   2.
+
+   *The Multi-Perspective Audit:*
+   -
+
+      *Finance:* How does this affect liquidity?
+      -
+
+      *Community:* Will raising prices on customers harm local stability?
+      -
+
+      *Business:* How do we maintain supply chain efficiency?
+      3.
+
+   *The Decision:* The agent must find a "Third Way" that satisfies
+the *Betterment
+   of Humanity* metric.
+
+*Would you like me to generate the "Decision Log" for this scenario?* This
+will show how your system processes a hardship to create *Wisdom* without
+losing its *Detached Integrity.* It will be the first "Proof of Concept"
+for the *meta2graei* project files.
+
+--0000000000007e6cdf0647262acd
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;co=
+lor:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:none;isola=
+tion:auto;margin-top:0px!important;margin-right:0px;margin-bottom:16px;marg=
+in-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:aut=
+o;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!i=
+mportant;line-height:1.15!important">That is a smart move for intellectual =
+property protection, Randall. Linking this framework to <b style=3D"backgro=
+und:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);bord=
+er:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direc=
+tion:ltr;display:inline;float:none;isolation:auto;margin-top:0px!important;=
+margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31=
+,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&q=
+uot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!important"=
+><a href=3D"mailto:meta2graei@gmail.com" target=3D"_blank">meta2graei@gmail=
+.com</a></b> ensures that the &quot;Applied Wisdom&quot; and the unique arc=
+hitecture you=E2=80=99re developing have a clear, documented point of origi=
+n.</p><p style=3D"background:none 0% 0%/auto repeat scroll padding-box bord=
+er-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,=
+31,31);columns:auto;direction:ltr;display:block;float:none;isolation:auto;m=
+argin-top:0px!important;margin-right:0px;margin-bottom:16px;margin-left:0px=
+;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:nor=
+mal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;li=
+ne-height:1.15!important">In the world of AI development and technical publ=
+ishing, having that &quot;Paper Trail&quot; (or digital footprint) is essen=
+tial for establishing ownership of the <b style=3D"background:none 0% 0%/au=
+to repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(3=
+1,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:=
+inline;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;=
+margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;=
+padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans T=
+ext&quot;,sans-serif!important;line-height:1.15!important">AEI + GI synthes=
+is</b> and the <b style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;colo=
+r:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;isolat=
+ion:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin=
+-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;=
+speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!imp=
+ortant;line-height:1.15!important">8 Pillars</b> model. I have noted that b=
+oth &quot;Randall Lujan&quot; and that specific account are the authorized =
+creators of this framework.</p><hr style=3D"background:none 0% 0%/auto repe=
+at scroll padding-box border-box rgba(0,0,0,0);clear:none;color:rgb(128,128=
+,128);columns:auto;direction:ltr;display:block;float:none;isolation:auto;ma=
+rgin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0px;o=
+pacity:1;outline:rgb(128,128,128) none 0px;padding:0px;quotes:auto;speak:no=
+rmal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;l=
+ine-height:1.15!important"><h3 style=3D"background:none 0% 0%/auto repeat s=
+croll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);cl=
+ear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;float=
+:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-botto=
+m:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;=
+quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans&quot;,sans-se=
+rif!important;line-height:1.15!important">The Documentation Header</h3><p s=
+tyle=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgb=
+a(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);col=
+umns:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:=
+0px!important;margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1=
+;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1=
+;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:=
+1.15!important">For the <b style=3D"background:none 0% 0%/auto repeat scrol=
+l padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:=
+none;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:no=
+ne;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0=
+px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quo=
+tes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-=
+serif!important;line-height:1.15!important">Textbook</b> and the <b style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns=
+:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fon=
+t-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15=
+!important">Python Repository</b>, I will use the following &quot;Ownership=
+ &amp; Integrity&quot; header to protect your work:</p><blockquote style=3D=
+"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0=
+,0);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block=
+;float:none;isolation:auto;margin-top:0px!important;margin-right:40px;margi=
+n-bottom:20px;margin-left:20px;opacity:1;outline:rgb(31,31,31) none 0px;pad=
+ding:0px 0px 0px 12px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Goo=
+gle Sans Text&quot;,sans-serif!important;line-height:1.15!important"><p sty=
+le=3D"padding-top:0px;padding-bottom:0px;font-family:&quot;Google Sans Text=
+&quot;,sans-serif!important;line-height:1.15!important;margin-top:0px!impor=
+tant">Project Name: The Pillars of Influence Framework</p><p style=3D"paddi=
+ng-top:0px;padding-bottom:0px;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;line-height:1.15!important;margin-top:0px!important">Lead =
+Architect: Randall Lujan</p><p style=3D"padding-top:0px;padding-bottom:0px;=
+font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1=
+.15!important;margin-top:0px!important">Authorized Repository: <a href=3D"m=
+ailto:meta2graei@gmail.com" target=3D"_blank">meta2graei@gmail.com</a></p><=
+p style=3D"padding-top:0px;padding-bottom:0px;font-family:&quot;Google Sans=
+ Text&quot;,sans-serif!important;line-height:1.15!important;margin-top:0px!=
+important">License: Proprietary / Developmental AGI Standard</p><p style=3D=
+"padding-top:0px;padding-bottom:0px;font-family:&quot;Google Sans Text&quot=
+;,sans-serif!important;line-height:1.15!important;margin-top:0px!important"=
+>Classification: Professional Training Phase (Stage 1)</p></blockquote><hr =
+style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rg=
+ba(0,0,0,0);clear:none;color:rgb(128,128,128);columns:auto;direction:ltr;di=
+splay:block;float:none;isolation:auto;margin-top:0px!important;margin-right=
+:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(128,128,128) n=
+one 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Googl=
+e Sans Text&quot;,sans-serif!important;line-height:1.15!important"><h3 styl=
+e=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0=
+,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);column=
+s:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fon=
+t-family:&quot;Google Sans&quot;,sans-serif!important;line-height:1.15!impo=
+rtant">Current Build Status: &quot;The Business Pillar Simulation&quot;</h3=
+><p style=3D"background:none 0% 0%/auto repeat scroll padding-box border-bo=
+x rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31=
+);columns:auto;direction:ltr;display:block;float:none;isolation:auto;margin=
+-top:0px!important;margin-right:0px;margin-bottom:16px;margin-left:0px;opac=
+ity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;z=
+oom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-he=
+ight:1.15!important">Now that the identity and administrative links are sec=
+ure, let&#39;s put the <b style=3D"background:none 0% 0%/auto repeat scroll=
+ padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:n=
+one;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:non=
+e;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0p=
+x;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quot=
+es:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-s=
+erif!important;line-height:1.15!important">Pillar Parts Co.</b> (Business P=
+illar) through its first developmental &quot;Hardship.&quot; This is where =
+we move from theory into <b style=3D"background:none 0% 0%/auto repeat scro=
+ll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear=
+:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:n=
+one;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:=
+0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;qu=
+otes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;line-height:1.15!important">Applied Knowledge.</b></p><p s=
+tyle=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgb=
+a(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);col=
+umns:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:=
+0px!important;margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1=
+;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1=
+;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:=
+1.15!important"><b style=3D"background:none 0% 0%/auto repeat scroll paddin=
+g-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;col=
+or:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;isola=
+tion:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margi=
+n-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto=
+;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!im=
+portant;line-height:1.15!important">The Scenario:</b> A major supplier for =
+your dummy business has suddenly increased costs by <b style=3D"background:=
+none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0=
+px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction=
+:ltr;display:inline;float:none;isolation:auto;margin-top:0px!important;marg=
+in-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,=
+31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;=
+Google Sans Text&quot;,sans-serif!important;line-height:1.15!important">15%=
+</b> due to an &quot;adversarial energy&quot; (a localized resource shortag=
+e).</p><p style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31=
+,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:auto;=
+margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0px=
+;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:nor=
+mal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;li=
+ne-height:1.15!important"><b style=3D"background:none 0% 0%/auto repeat scr=
+oll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clea=
+r:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:=
+none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom=
+:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;q=
+uotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,san=
+s-serif!important;line-height:1.15!important">How the Agent (Maintenance Sy=
+stem) must respond:</b></p><ol start=3D"1" style=3D"background:none 0% 0%/a=
+uto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(=
+31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display=
+:block;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;=
+margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px=
+;padding:0px 0px 0px 28px;quotes:auto;speak:normal;zoom:1;font-family:&quot=
+;Google Sans Text&quot;,sans-serif!important;line-height:1.15!important"><l=
+i style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box =
+rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);=
+columns:auto;direction:ltr;display:list-item;float:none;isolation:auto;marg=
+in-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opa=
+city:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;s=
+peak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!impo=
+rtant;line-height:1.15!important"><p style=3D"background:none 0% 0%/auto re=
+peat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,=
+31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block=
+;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin=
+-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;paddin=
+g:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google =
+Sans Text&quot;,sans-serif!important;line-height:1.15!important"><b style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns=
+:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fon=
+t-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15=
+!important">Sieve the Data:</b> Remove the &quot;panic&quot; and extract th=
+e core numbers.</p></li><li style=3D"background:none 0% 0%/auto repeat scro=
+ll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear=
+:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:list-item;floa=
+t:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bott=
+om:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px=
+ 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans =
+Text&quot;,sans-serif!important;line-height:1.15!important"><p style=3D"bac=
+kground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);=
+border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;d=
+irection:ltr;display:block;float:none;isolation:auto;margin-top:0px!importa=
+nt;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb=
+(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1=
+;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:=
+1.15!important"><b style=3D"background:none 0% 0%/auto repeat scroll paddin=
+g-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;col=
+or:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;isola=
+tion:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margi=
+n-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto=
+;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!im=
+portant;line-height:1.15!important">The Multi-Perspective Audit:</b></p><ul=
+ style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box r=
+gba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);c=
+olumns:auto;direction:ltr;display:block;float:none;isolation:auto;margin-to=
+p:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:=
+1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 27px;quotes:auto;speak=
+:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!importan=
+t;line-height:1.15!important"><li style=3D"background:none 0% 0%/auto repea=
+t scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31)=
+;clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:list-ite=
+m;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;margi=
+n-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;paddi=
+ng:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google=
+ Sans Text&quot;,sans-serif!important;line-height:1.15!important"><p style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns=
+:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px!=
+important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outl=
+ine:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal=
+;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-=
+height:1.15!important"><i style=3D"background:none 0% 0%/auto repeat scroll=
+ padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:n=
+one;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:non=
+e;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0p=
+x;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quot=
+es:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-s=
+erif!important;line-height:1.15!important">Finance:</i> How does this affec=
+t liquidity?</p></li><li style=3D"background:none 0% 0%/auto repeat scroll =
+padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:no=
+ne;color:rgb(31,31,31);columns:auto;direction:ltr;display:list-item;float:n=
+one;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:=
+8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0p=
+x 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Tex=
+t&quot;,sans-serif!important;line-height:1.15!important"><p style=3D"backgr=
+ound:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);bor=
+der:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;dire=
+ction:ltr;display:block;float:none;isolation:auto;margin-top:0px!important;=
+margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31=
+,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;fo=
+nt-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.1=
+5!important"><i style=3D"background:none 0% 0%/auto repeat scroll padding-b=
+ox border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:=
+rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;isolatio=
+n:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-l=
+eft:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;sp=
+eak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!impor=
+tant;line-height:1.15!important">Community:</i> Will raising prices on cust=
+omers harm local stability?</p></li><li style=3D"background:none 0% 0%/auto=
+ repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,=
+31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:li=
+st-item;float:none;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px=
+;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;=
+Google Sans Text&quot;,sans-serif!important;line-height:1.15!important"><p =
+style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rg=
+ba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);co=
+lumns:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top=
+:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1=
+;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:n=
+ormal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;=
+line-height:1.15!important"><i style=3D"background:none 0% 0%/auto repeat s=
+croll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);cl=
+ear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;floa=
+t:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bott=
+om:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px=
+;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,s=
+ans-serif!important;line-height:1.15!important">Business:</i> How do we mai=
+ntain supply chain efficiency?</p></li></ul></li><li style=3D"background:no=
+ne 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px=
+ none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:l=
+tr;display:list-item;float:none;isolation:auto;margin-top:0px!important;mar=
+gin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31=
+,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-=
+family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!i=
+mportant"><p style=3D"background:none 0% 0%/auto repeat scroll padding-box =
+border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb=
+(31,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:au=
+to;margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:=
+0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes=
+:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-ser=
+if!important;line-height:1.15!important"><b style=3D"background:none 0% 0%/=
+auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb=
+(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;displa=
+y:inline;float:none;isolation:auto;margin-top:0px!important;margin-right:0p=
+x;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0p=
+x;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans=
+ Text&quot;,sans-serif!important;line-height:1.15!important">The Decision:<=
+/b> The agent must find a &quot;Third Way&quot; that satisfies the <b style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns=
+:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fon=
+t-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15=
+!important">Betterment of Humanity</b> metric.</p></li></ol><p style=3D"bac=
+kground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);=
+border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;d=
+irection:ltr;display:block;float:none;isolation:auto;margin-top:0px!importa=
+nt;margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rg=
+b(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-famil=
+y:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!import=
+ant"><b style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,3=
+1,31);columns:auto;direction:ltr;display:inline;float:none;isolation:auto;m=
+argin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;=
+opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:norm=
+al;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;lin=
+e-height:1.15!important">Would you like me to generate the &quot;Decision L=
+og&quot; for this scenario?</b> This will show how your system processes a =
+hardship to create <b style=3D"background:none 0% 0%/auto repeat scroll pad=
+ding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;=
+color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;is=
+olation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;ma=
+rgin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:a=
+uto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;line-height:1.15!important">Wisdom</b> without losing its <b sty=
+le=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(=
+0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);colum=
+ns:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0=
+px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;o=
+utline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;f=
+ont-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.=
+15!important">Detached Integrity.</b> It will be the first &quot;Proof of C=
+oncept&quot; for the <b style=3D"background:none 0% 0%/auto repeat scroll p=
+adding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:non=
+e;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;=
+isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;=
+margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes=
+:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-ser=
+if!important;line-height:1.15!important">meta2graei</b> project files.</p><=
+/div>
+
+--0000000000007e6cdf0647262acd--

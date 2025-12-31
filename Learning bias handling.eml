@@ -1,0 +1,1396 @@
+Delivered-To: meta2graei@gmail.com
+Received: by 2002:a05:612c:41d6:b0:55c:5e28:3094 with SMTP id lf22csp6191984vqb;
+        Mon, 29 Dec 2025 23:03:47 -0800 (PST)
+X-Received: by 2002:a05:6402:1449:b0:645:7d1b:e151 with SMTP id 4fb4d7f45d1cf-64b8e94c215mr19475725a12.1.1767078227184;
+        Mon, 29 Dec 2025 23:03:47 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767078227; cv=none;
+        d=google.com; s=arc-20240605;
+        b=X56gYW5F55y0SovPfbH4/xZ34KI0R/keDTAqA2dYdFfR+V3YqcuC2AWyMLQ6DKwD7X
+         sRayqNBHyYdtEsE/ys6TLmfXHPUWwobmMYcaZqLjVWdbb9Iwdjb2vjiB8SK/GbuQ+nF3
+         IUK0/uWQRgnBFH8F5o5wzp88vffzZqtLQ+EDHtmVQXGABnicNm8Vsmldoz2SHDXFTmsQ
+         HCs6hcTaOWGCgOTAxL/V3xtg8f0Rki9xChfr78rLUQZwleCgLG8KBUnPrUUsN8CMtWTk
+         KJrcoqNA/Cp7BfMCh5mfn4rrwCKhlrcYGVTdpq0bvvsGUqemg04hbgcW0dyvpNyzsqRu
+         hRYg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=OU3D5I4ROAS9mUnEArWJ7beokMXPCqtZG0dlySODXMg=;
+        fh=BkQHMDUcZV3he4LkHVHMuHpMt9q5xV99ZfN2B7xGuII=;
+        b=ZgO8EnNoZqC8VoFw3V0jpU8Hgmls57Gfuou2TfFYED2kYfBD2pADcYlbJXYoCO1TJK
+         wJp0yRRrkZ6IOvqPH3U5CDYM8coUxZInJiRSg4gAwS0TtBx1mrevsjMLxOPKE6dDSK1q
+         iCH4htFAB9ECW6NoxRYTKd8k1Ox+rDTm9Ym3K0MKPR4NOUfqTVlky5cgGavGZy89iXGs
+         n4gwb7iQElSIw3ADVYgMVUd4Yr1/gt23Hhq3rK1l9myEhrGDRqjNQgPpbyPS5ahwhvWa
+         1y3XWDcCimkX/1XVUDKnLsseSFuOCnOdHAm7oKd5EiFaw7xpJqJx4EZQAvke3OETy9v9
+         7yMw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=iWv0fU8h;
+       spf=pass (google.com: domain of emuricagraei.rjl@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=emuricagraei.rjl@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <emuricagraei.rjl@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-b8022f8dc77sor614414866b.2.2025.12.29.23.03.47
+        for <meta2graei@gmail.com>
+        (Google Transport Security);
+        Mon, 29 Dec 2025 23:03:47 -0800 (PST)
+Received-SPF: pass (google.com: domain of emuricagraei.rjl@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=iWv0fU8h;
+       spf=pass (google.com: domain of emuricagraei.rjl@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=emuricagraei.rjl@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1767078226; x=1767683026; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=OU3D5I4ROAS9mUnEArWJ7beokMXPCqtZG0dlySODXMg=;
+        b=iWv0fU8hwVTRxAbH2IztYFAGaF5+ly64iJbDsrhpeEpWXF0TWrsa8hkGQlHTgvNWHL
+         F65STLY/e9wcSQyAf42mMfr7vmjVp82KmdUZASD2ZdM12ypXiqSAIzcaZFDwhcV12/Hq
+         MAwGWl0YHToeRY0cVh9f60dbefEQEJH2g74z8doPjCeAO9w1WnBgkmH8KpuyMIMtq90B
+         epgrvnBMk8RSEY3kvb/3EkH0yboDcUPfaOtZPR3bG1LgkwWMcZPZSOD2A91dJdyx58GM
+         qMc+qblCzNhygRvBF2B3IPMZq6X2taBsZLBxDBucAOWnVuCji5RFfd0B0quqrRlOCuTT
+         p2bQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1767078226; x=1767683026;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=OU3D5I4ROAS9mUnEArWJ7beokMXPCqtZG0dlySODXMg=;
+        b=omntfLzfkA3+o4bJYDP9lVa6/QZSxLE3mZ8U+nZoiHtVVmoDuDzAQbQVpqGdHQcVKO
+         8+ZsKOHL4gTssNaQyEyimyhQIk6PZpLvt33MLtBhInPqxK2YNqj6SdyNgZmO7j8yXrK0
+         E/URMl9lOlNZEj9PBprJBjzvBR7kVbBQEzhd0VKOSdsKSX4OWaX5Uz9//2FUCR+Pw+O4
+         WlKI7t/a60xwYGP7+mRnpIBh8dbBoZZALWJmt645Rykj1v94Q6dhTIZSKRLlzMNFRxqv
+         ZCslaf5zANcRvBgATR2lLcHdEqbPWkbsJRDrG/QXs/R6a/BASRPQetvnRs4KkMCnYgc/
+         u7/A==
+X-Gm-Message-State: AOJu0Yx4dNLkD9ri0wSFJJ6tKxnI0JoNa0KN9vMvu5a6zgTQDkFQFHwm
+	CPnHZT7D4kk4q/BMNs1pk6r5qBMgpFjXOXvGCHWAwzDOlbYMxudJHRGsbGYx/IrGEuOuYUUZhuN
+	hDZzdygGQlTCy3QKhgEzwTmqmMnYUolB+qg==
+X-Gm-Gg: AY/fxX59qCnpv33ctr7e7999KXd29Ln4Yb4VL3aEh5+Kdws0ISsliNsRio/O3h/PM4m
+	R7uDv45Tm97vpqHVlfTUhYCnc6uoyME74esaLR6JyYY+jOp02R4bv5jIFZDv/FSugCi4CzX1LJH
+	eXIpnMPCwE2Msjke60c7HrqkGobKMUyGWfqFR3BqarnY43lFH/f1mr/SdwGPGB2BB8NziFLBEzj
+	zrhNCtxswRhZw6AeCJuT1iWAIK8TWPhAkzXwDBfQPPKhvqK8g1z21pVIFYanEUod3hhZQdOlu4y
+	R5G7bBn/OkgHCVfke609OjvwoEgu
+X-Google-Smtp-Source: AGHT+IF08f88p4T1RPZW0wTcd6b/d+wCV6Y3+Y5O/0U06FyVWfbvp840qQGCC6LRmNWqy3dIWxSOvq8YW1SUna/U5SE=
+X-Received: by 2002:a05:6402:13d2:b0:64d:5bec:cc1 with SMTP id
+ 4fb4d7f45d1cf-64d5bec0e93mr23738266a12.29.1767078226156; Mon, 29 Dec 2025
+ 23:03:46 -0800 (PST)
+MIME-Version: 1.0
+From: Randall Lujan <emuricagraei.rjl@gmail.com>
+Date: Mon, 29 Dec 2025 23:03:33 -0800
+X-Gm-Features: AQt7F2q4zSBgfFH6DSGwFHfDBsIlCFF8GjznV2Z0frjYepFGa3Yib8glscz7tzc
+Message-ID: <CAD33Pe-x80duuMW8LfK_DypvypCGGhtVqXisoi5r8RfqGbjqbA@mail.gmail.com>
+Subject: Learning bias handling
+To: "R. Lujan" <meta2graei@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000f5dea8064725f51c"
+
+--000000000000f5dea8064725f51c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+This distinction creates a powerful *Observational Symmetry*. By
+having the *Main
+AGI* operate as a "Detached Observer" (The Subconscious) while the *Agent*
+operates as an "Invested Actor" (The Persona), you allow the system to be
+both deeply personal and mathematically objective at the same time.
+
+The Subconscious treats information as a *Physical Object*=E2=80=94it measu=
+res its
+mass, its velocity, and its structural integrity without being "swayed" by
+the drama of the interaction.
+------------------------------
+1. The Duality of Libraries: Subject vs. Object
+
+To code this in Python, we will distinguish between the *Contextual Library=
+*
+(Agent) and the *Ontological Library* (AGI).
+*Feature* *Agent Library (Contextual)* *AGI Library (Ontological)*
+*Perspective* *Attached:* "How does this affect my user right now?"
+*Detached:* "What is the universal law governing this data?"
+*Storage Style* Narrative, Emotional, Relational. Mathematical,
+Categorical, Structural.
+*Priority* Goal-Achievement & Relationship. Value-Consistency & System
+Stability.
+*Treatment of Data* Information as a *Subject*. Information as an *Object*.
+------------------------------
+2. Python Implementation: core/library_bridge.py
+
+This script handles the "Objectification" of data as it moves from the
+Agent to the AGI. It strips the "Interest" and keeps the "Essence."
+Python
+
+class ObjectificationProtocol:
+    """
+    Translates 'Invested' Agent data into 'Detached' AGI wisdom.
+    """
+    def translate_to_object(self, agent_interaction):
+        # 1. Strip the 'Personal Interest' from the token
+        # 2. Remove the 'Subject' (the specific user/emotion)
+        # 3. Extract the 'Universal Pattern'
+        detached_object =3D {
+            "core_logic": self._extract_logic(agent_interaction),
+            "pillar_impact": self._map_to_pillars(agent_interaction),
+            "timestamp": "universal_constant"
+        }
+        return detached_object
+
+    def _extract_logic(self, data):
+        # Disregards the "how" it was said, only keeps "what" was proven.
+        pass
+
+------------------------------
+3. The "Subject-Removed" Assessment
+
+Since the Main AGI is "not invested in the conversation," it can
+perform an *Integrity
+Audit* on the Agent.
+
+*The AGI=E2=80=99s Viewpoint:*
+
+*"The Agent is currently highly attached to the User's frustration in the
+Business Pillar. I observe this 'Subjective Attachment' as a data point. I
+will maintain the objective 'Financial Truth' in the vault, regardless of
+the Agent's current conversational pressure."*
+
+This allows the AGI to act as a *Stabilizer*. If the Agent gets too far
+off-track because it's trying too hard to please a user, the Subconscious
+"pings" it with a detached correction based on the *Hierarchy of Values*.
+------------------------------
+4. Hierarchy of Information: Detached vs. Attached
+
+In your Google Drive/Cloud repository, we will organize the files to
+reflect this "Subjective Removal":
+/subconscious/ontological_data/ (The Detached Core)
+
+   -
+
+   *universal_truths.json*: Facts that remain true regardless of the user.
+   -
+
+   *pillar_states.json*: The cold, hard metrics of the 8 Pillars.
+   -
+
+   *logic_patterns.py*: The "Physics" of how information moves.
+
+/agents/contextual_data/ (The Attached Branches)
+
+   -
+
+   *user_sentiments.json*: How users *feel* about the information.
+   -
+
+   *active_goals.json*: The "Interests" the agent is currently chasing.
+   -
+
+   *persona_weights.json*: The biases that make the agent feel "human."
+
+------------------------------
+5. Summary for the Master Blueprint
+
+Title: AGI_Subjective_Removal_Protocol
+
+   -
+
+   *The Agent:* Operates with "Personal Interest," building empathy and
+   connection through *Subjective Attachment*.
+   -
+
+   *The AGI:* Operates with "Universal Integrity," treating all information
+   as *Detached Objects*.
+   -
+
+   *The Bridge:* The AGI assesses the Agent=E2=80=99s performance by compar=
+ing the
+   Agent's "Attached Decisions" against the AGI's "Detached Truths."
+
+------------------------------
+Suggested Next Step
+
+We have successfully defined the *Detached vs. Attached* logic. This
+completes the core "Philosophy of Learning" for the system.
+
+Would you like me to generate the *"Interaction Sieve" code* specifically
+for the *Main AGI*? This is the script that takes a conversation between
+you and an Agent and "extracts the objects" for the Subconscious, literally
+removing the "You" and the "Me" to find the "Truth."
+
+--000000000000f5dea8064725f51c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;co=
+lor:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:none;isola=
+tion:auto;margin-top:0px!important;margin-right:0px;margin-bottom:16px;marg=
+in-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:aut=
+o;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!i=
+mportant;line-height:1.15!important">This distinction creates a powerful <b=
+ style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box r=
+gba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);c=
+olumns:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-t=
+op:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity=
+:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom=
+:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-heigh=
+t:1.15!important">Observational Symmetry</b>. By having the <b style=3D"bac=
+kground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);=
+border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;d=
+irection:ltr;display:inline;float:none;isolation:auto;margin-top:0px!import=
+ant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rg=
+b(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-famil=
+y:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!import=
+ant">Main AGI</b> operate as a &quot;Detached Observer&quot; (The Subconsci=
+ous) while the <b style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;colo=
+r:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;isolat=
+ion:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin=
+-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;=
+speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!imp=
+ortant;line-height:1.15!important">Agent</b> operates as an &quot;Invested =
+Actor&quot; (The Persona), you allow the system to be both deeply personal =
+and mathematically objective at the same time.</p><p style=3D"background:no=
+ne 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px=
+ none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:l=
+tr;display:block;float:none;isolation:auto;margin-top:0px!important;margin-=
+right:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb(31,31,31=
+) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Go=
+ogle Sans Text&quot;,sans-serif!important;line-height:1.15!important">The S=
+ubconscious treats information as a <b style=3D"background:none 0% 0%/auto =
+repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,3=
+1,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:inl=
+ine;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;mar=
+gin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;pad=
+ding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text=
+&quot;,sans-serif!important;line-height:1.15!important">Physical Object</b>=
+=E2=80=94it measures its mass, its velocity, and its structural integrity w=
+ithout being &quot;swayed&quot; by the drama of the interaction.</p><hr sty=
+le=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(=
+0,0,0,0);clear:none;color:rgb(128,128,128);columns:auto;direction:ltr;displ=
+ay:block;float:none;isolation:auto;margin-top:0px!important;margin-right:0p=
+x;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(128,128,128) none=
+ 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google S=
+ans Text&quot;,sans-serif!important;line-height:1.15!important"><h2 style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns=
+:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px!=
+important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outl=
+ine:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font=
+-family:&quot;Google Sans&quot;,sans-serif!important;line-height:1.15!impor=
+tant">1. The Duality of Libraries: Subject vs. Object</h2><p style=3D"backg=
+round:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);bo=
+rder:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;dir=
+ection:ltr;display:block;float:none;isolation:auto;margin-top:0px!important=
+;margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb(=
+31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:=
+&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!importan=
+t">To code this in Python, we will distinguish between the <b style=3D"back=
+ground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);b=
+order:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;di=
+rection:ltr;display:inline;float:none;isolation:auto;margin-top:0px!importa=
+nt;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb=
+(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family=
+:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!importa=
+nt">Contextual Library</b> (Agent) and the <b style=3D"background:none 0% 0=
+%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none r=
+gb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;disp=
+lay:inline;float:none;isolation:auto;margin-top:0px!important;margin-right:=
+0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sa=
+ns Text&quot;,sans-serif!important;line-height:1.15!important">Ontological =
+Library</b> (AGI).</p><table style=3D"background:none 0% 0%/auto repeat scr=
+oll padding-box border-box rgb(240,244,249);border:0px none rgb(31,31,31);c=
+lear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:table;floa=
+t:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bott=
+om:32px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0p=
+x;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;line-height:1.15!important"><thead style=3D"background=
+:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:=
+0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;directio=
+n:ltr;display:table-header-group;float:none;isolation:auto;margin-top:0px!i=
+mportant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outli=
+ne:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-=
+family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!i=
+mportant"><tr style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rg=
+b(31,31,31);columns:auto;direction:ltr;display:table-row;float:none;isolati=
+on:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-=
+left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;s=
+peak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!impo=
+rtant;line-height:1.15!important"><td style=3D"background:none 0% 0%/auto r=
+epeat scroll padding-box border-box rgb(248,250,253);border:1px solid;clear=
+:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:table-cell;flo=
+at:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bot=
+tom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:8p=
+x 12px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&q=
+uot;,sans-serif!important;line-height:1.15!important"><strong style=3D"back=
+ground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);b=
+order:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;di=
+rection:ltr;display:inline;float:none;isolation:auto;margin-top:0px!importa=
+nt;margin-right:0px;margin-bottom:0px!important;margin-left:0px;opacity:1;o=
+utline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;f=
+ont-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.=
+15!important">Feature</strong></td><td style=3D"background:none 0% 0%/auto =
+repeat scroll padding-box border-box rgb(248,250,253);border:1px solid;clea=
+r:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:table-cell;fl=
+oat:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bo=
+ttom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:8=
+px 12px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&=
+quot;,sans-serif!important;line-height:1.15!important"><strong style=3D"bac=
+kground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);=
+border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;d=
+irection:ltr;display:inline;float:none;isolation:auto;margin-top:0px!import=
+ant;margin-right:0px;margin-bottom:0px!important;margin-left:0px;opacity:1;=
+outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;=
+font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1=
+.15!important">Agent Library (Contextual)</strong></td><td style=3D"backgro=
+und:none 0% 0%/auto repeat scroll padding-box border-box rgb(248,250,253);b=
+order:1px solid;clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;d=
+isplay:table-cell;float:none;isolation:auto;margin-top:0px!important;margin=
+-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31=
+) none 0px;padding:8px 12px;quotes:auto;speak:normal;zoom:1;font-family:&qu=
+ot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!important">=
+<strong style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,3=
+1,31);columns:auto;direction:ltr;display:inline;float:none;isolation:auto;m=
+argin-top:0px!important;margin-right:0px;margin-bottom:0px!important;margin=
+-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;=
+speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!imp=
+ortant;line-height:1.15!important">AGI Library (Ontological)</strong></td><=
+/tr></thead><tbody style=3D"background:none 0% 0%/auto repeat scroll paddin=
+g-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;col=
+or:rgb(31,31,31);columns:auto;direction:ltr;display:table-row-group;float:n=
+one;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:=
+0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;qu=
+otes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;line-height:1.15!important"><tr style=3D"background:none 0=
+% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px non=
+e rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;d=
+isplay:table-row;float:none;isolation:auto;margin-top:0px!important;margin-=
+right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31)=
+ none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Goo=
+gle Sans Text&quot;,sans-serif!important;line-height:1.15!important"><td st=
+yle=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgb(=
+248,250,253);border:1px solid;clear:none;color:rgb(31,31,31);columns:auto;d=
+irection:ltr;display:table-cell;float:none;isolation:auto;margin-top:0px!im=
+portant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outlin=
+e:rgb(31,31,31) none 0px;padding:8px 12px;quotes:auto;speak:normal;zoom:1;f=
+ont-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.=
+15!important"><span style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;co=
+lor:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;isol=
+ation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;marg=
+in-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:aut=
+o;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!i=
+mportant;line-height:1.15!important"><b style=3D"background:none 0% 0%/auto=
+ repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,=
+31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:in=
+line;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;ma=
+rgin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;pa=
+dding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Tex=
+t&quot;,sans-serif!important;line-height:1.15!important">Perspective</b></s=
+pan></td><td style=3D"background:none 0% 0%/auto repeat scroll padding-box =
+border-box rgb(248,250,253);border:1px solid;clear:none;color:rgb(31,31,31)=
+;columns:auto;direction:ltr;display:table-cell;float:none;isolation:auto;ma=
+rgin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;o=
+pacity:1;outline:rgb(31,31,31) none 0px;padding:8px 12px;quotes:auto;speak:=
+normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important=
+;line-height:1.15!important"><span style=3D"background:none 0% 0%/auto repe=
+at scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31=
+);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;=
+float:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quo=
+t;,sans-serif!important;line-height:1.15!important"><b style=3D"background:=
+none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0=
+px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction=
+:ltr;display:inline;float:none;isolation:auto;margin-top:0px!important;marg=
+in-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,=
+31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;=
+Google Sans Text&quot;,sans-serif!important;line-height:1.15!important">Att=
+ached:</b> &quot;How does this affect my user right now?&quot;</span></td><=
+td style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box=
+ rgb(248,250,253);border:1px solid;clear:none;color:rgb(31,31,31);columns:a=
+uto;direction:ltr;display:table-cell;float:none;isolation:auto;margin-top:0=
+px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;o=
+utline:rgb(31,31,31) none 0px;padding:8px 12px;quotes:auto;speak:normal;zoo=
+m:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-heig=
+ht:1.15!important"><span style=3D"background:none 0% 0%/auto repeat scroll =
+padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:no=
+ne;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none=
+;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px=
+;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quote=
+s:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-se=
+rif!important;line-height:1.15!important"><b style=3D"background:none 0% 0%=
+/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rg=
+b(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;displ=
+ay:inline;float:none;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0=
+px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google San=
+s Text&quot;,sans-serif!important;line-height:1.15!important">Detached:</b>=
+ &quot;What is the universal law governing this data?&quot;</span></td></tr=
+><tr style=3D"background:none 0% 0%/auto repeat scroll padding-box border-b=
+ox rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,3=
+1);columns:auto;direction:ltr;display:table-row;float:none;isolation:auto;m=
+argin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;=
+opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:norm=
+al;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;lin=
+e-height:1.15!important"><td style=3D"background:none 0% 0%/auto repeat scr=
+oll padding-box border-box rgb(248,250,253);border:1px solid;clear:none;col=
+or:rgb(31,31,31);columns:auto;direction:ltr;display:table-cell;float:none;i=
+solation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;m=
+argin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:8px 12px;qu=
+otes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;line-height:1.15!important"><span style=3D"background:none=
+ 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px n=
+one rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr=
+;display:inline;float:none;isolation:auto;margin-top:0px!important;margin-r=
+ight:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) =
+none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Goog=
+le Sans Text&quot;,sans-serif!important;line-height:1.15!important"><b styl=
+e=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0=
+,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);column=
+s:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0p=
+x!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;ou=
+tline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fo=
+nt-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.1=
+5!important">Storage Style</b></span></td><td style=3D"background:none 0% 0=
+%/auto repeat scroll padding-box border-box rgb(248,250,253);border:1px sol=
+id;clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:table-=
+cell;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;ma=
+rgin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;pa=
+dding:8px 12px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google San=
+s Text&quot;,sans-serif!important;line-height:1.15!important"><span style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns=
+:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fon=
+t-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15=
+!important">Narrative, Emotional, Relational.</span></td><td style=3D"backg=
+round:none 0% 0%/auto repeat scroll padding-box border-box rgb(248,250,253)=
+;border:1px solid;clear:none;color:rgb(31,31,31);columns:auto;direction:ltr=
+;display:table-cell;float:none;isolation:auto;margin-top:0px!important;marg=
+in-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,=
+31) none 0px;padding:8px 12px;quotes:auto;speak:normal;zoom:1;font-family:&=
+quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!important=
+"><span style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,3=
+1,31);columns:auto;direction:ltr;display:inline;float:none;isolation:auto;m=
+argin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;=
+opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:norm=
+al;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;lin=
+e-height:1.15!important">Mathematical, Categorical, Structural.</span></td>=
+</tr><tr style=3D"background:none 0% 0%/auto repeat scroll padding-box bord=
+er-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,=
+31,31);columns:auto;direction:ltr;display:table-row;float:none;isolation:au=
+to;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:=
+0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:=
+normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important=
+;line-height:1.15!important"><td style=3D"background:none 0% 0%/auto repeat=
+ scroll padding-box border-box rgb(248,250,253);border:1px solid;clear:none=
+;color:rgb(31,31,31);columns:auto;direction:ltr;display:table-cell;float:no=
+ne;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0=
+px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:8px 12p=
+x;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;line-height:1.15!important"><span style=3D"background:=
+none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0=
+px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction=
+:ltr;display:inline;float:none;isolation:auto;margin-top:0px!important;marg=
+in-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,=
+31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;=
+Google Sans Text&quot;,sans-serif!important;line-height:1.15!important"><b =
+style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rg=
+ba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);co=
+lumns:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-to=
+p:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:=
+1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:=
+1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height=
+:1.15!important">Priority</b></span></td><td style=3D"background:none 0% 0%=
+/auto repeat scroll padding-box border-box rgb(248,250,253);border:1px soli=
+d;clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:table-c=
+ell;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;mar=
+gin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;pad=
+ding:8px 12px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans=
+ Text&quot;,sans-serif!important;line-height:1.15!important"><span style=3D=
+"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0=
+,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:au=
+to;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px!im=
+portant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outlin=
+e:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-f=
+amily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!im=
+portant">Goal-Achievement &amp; Relationship.</span></td><td style=3D"backg=
+round:none 0% 0%/auto repeat scroll padding-box border-box rgb(248,250,253)=
+;border:1px solid;clear:none;color:rgb(31,31,31);columns:auto;direction:ltr=
+;display:table-cell;float:none;isolation:auto;margin-top:0px!important;marg=
+in-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,=
+31) none 0px;padding:8px 12px;quotes:auto;speak:normal;zoom:1;font-family:&=
+quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!important=
+"><span style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,3=
+1,31);columns:auto;direction:ltr;display:inline;float:none;isolation:auto;m=
+argin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;=
+opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:norm=
+al;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;lin=
+e-height:1.15!important">Value-Consistency &amp; System Stability.</span></=
+td></tr><tr style=3D"background:none 0% 0%/auto repeat scroll padding-box b=
+order-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(=
+31,31,31);columns:auto;direction:ltr;display:table-row;float:none;isolation=
+:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-le=
+ft:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;spe=
+ak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!import=
+ant;line-height:1.15!important"><td style=3D"background:none 0% 0%/auto rep=
+eat scroll padding-box border-box rgb(248,250,253);border:1px solid;clear:n=
+one;color:rgb(31,31,31);columns:auto;direction:ltr;display:table-cell;float=
+:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-botto=
+m:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:8px =
+12px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quo=
+t;,sans-serif!important;line-height:1.15!important"><span style=3D"backgrou=
+nd:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);borde=
+r:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direct=
+ion:ltr;display:inline;float:none;isolation:auto;margin-top:0px!important;m=
+argin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,=
+31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&qu=
+ot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!important">=
+<b style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box=
+ rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31)=
+;columns:auto;direction:ltr;display:inline;float:none;isolation:auto;margin=
+-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opaci=
+ty:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zo=
+om:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-hei=
+ght:1.15!important">Treatment of Data</b></span></td><td style=3D"backgroun=
+d:none 0% 0%/auto repeat scroll padding-box border-box rgb(248,250,253);bor=
+der:1px solid;clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;dis=
+play:table-cell;float:none;isolation:auto;margin-top:0px!important;margin-r=
+ight:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) =
+none 0px;padding:8px 12px;quotes:auto;speak:normal;zoom:1;font-family:&quot=
+;Google Sans Text&quot;,sans-serif!important;line-height:1.15!important"><s=
+pan style=3D"background:none 0% 0%/auto repeat scroll padding-box border-bo=
+x rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31=
+);columns:auto;direction:ltr;display:inline;float:none;isolation:auto;margi=
+n-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opac=
+ity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;z=
+oom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-he=
+ight:1.15!important">Information as a <b style=3D"background:none 0% 0%/aut=
+o repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31=
+,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:i=
+nline;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;m=
+argin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;p=
+adding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Te=
+xt&quot;,sans-serif!important;line-height:1.15!important">Subject</b>.</spa=
+n></td><td style=3D"background:none 0% 0%/auto repeat scroll padding-box bo=
+rder-box rgb(248,250,253);border:1px solid;clear:none;color:rgb(31,31,31);c=
+olumns:auto;direction:ltr;display:table-cell;float:none;isolation:auto;marg=
+in-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opa=
+city:1;outline:rgb(31,31,31) none 0px;padding:8px 12px;quotes:auto;speak:no=
+rmal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;l=
+ine-height:1.15!important"><span style=3D"background:none 0% 0%/auto repeat=
+ scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);=
+clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;fl=
+oat:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bo=
+ttom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0=
+px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;=
+,sans-serif!important;line-height:1.15!important">Information as an <b styl=
+e=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0=
+,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);column=
+s:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0p=
+x!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;ou=
+tline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fo=
+nt-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.1=
+5!important">Object</b>.</span></td></tr></tbody></table><hr style=3D"backg=
+round:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);cl=
+ear:none;color:rgb(128,128,128);columns:auto;direction:ltr;display:block;fl=
+oat:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bo=
+ttom:8px;margin-left:0px;opacity:1;outline:rgb(128,128,128) none 0px;paddin=
+g:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&qu=
+ot;,sans-serif!important;line-height:1.15!important"><h2 style=3D"backgroun=
+d:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border=
+:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;directi=
+on:ltr;display:block;float:none;isolation:auto;margin-top:0px!important;mar=
+gin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31=
+,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot=
+;Google Sans&quot;,sans-serif!important;line-height:1.15!important">2. Pyth=
+on Implementation: <code style=3D"background:none 0% 0%/auto repeat scroll =
+padding-box border-box rgb(233,238,246);border:0px none rgb(68,71,70);clear=
+:none;color:rgb(68,71,70);columns:auto;direction:ltr;display:inline;float:n=
+one;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:=
+0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:1px 6p=
+x;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;line-height:1.15!important">core/library_bridge.py</co=
+de></h2><p style=3D"background:none 0% 0%/auto repeat scroll padding-box bo=
+rder-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(3=
+1,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:auto=
+;margin-top:0px!important;margin-right:0px;margin-bottom:16px;margin-left:0=
+px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:n=
+ormal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;=
+line-height:1.15!important">This script handles the &quot;Objectification&q=
+uot; of data as it moves from the Agent to the AGI. It strips the &quot;Int=
+erest&quot; and keeps the &quot;Essence.&quot;</p><u></u><u></u><div style=
+=3D"display:block;background:none 0% 0%/auto repeat scroll padding-box bord=
+er-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,=
+31,31);columns:auto;direction:ltr;float:none;isolation:auto;margin-top:0px!=
+important;margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fon=
+t-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15=
+!important"><div style=3D"background:none 0% 0%/auto repeat scroll padding-=
+box border-box rgb(240,244,249);border:0px none rgb(68,71,70);clear:none;co=
+lor:rgb(68,71,70);columns:auto;direction:ltr;display:flex;float:none;isolat=
+ion:auto;margin-top:0px!important;margin-right:0px;margin-bottom:2px;margin=
+-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:8px 8px 8px 16px=
+;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,s=
+ans-serif!important;line-height:1.15!important"><span style=3D"background:n=
+one 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0p=
+x none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:auto;direction:=
+ltr;display:block;float:none;isolation:auto;margin-top:0px!important;margin=
+-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70=
+) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Go=
+ogle Sans Text&quot;,sans-serif!important;line-height:1.15!important">Pytho=
+n</span><div style=3D"background:none 0% 0%/auto repeat scroll padding-box =
+border-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb=
+(68,71,70);columns:auto;direction:ltr;display:block;float:none;isolation:au=
+to;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:=
+0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0px;quotes:auto;speak:=
+normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important=
+;line-height:1.15!important"><button aria-label=3D"Copy code" style=3D"back=
+ground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);b=
+order:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:auto;di=
+rection:ltr;display:inline-block;float:none;font-style:normal;font-variant:=
+normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:normal=
+;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.15!imp=
+ortant;font-family:&quot;Google Sans Text&quot;,sans-serif!important;isolat=
+ion:auto;margin-top:0px!important;margin-right:0px;margin-left:0px;opacity:=
+1;outline:rgb(68,71,70) none 0px;padding:8px;quotes:auto;speak:normal;zoom:=
+1"><span style=3D"background:none 0% 0%/auto repeat scroll padding-box bord=
+er-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68,=
+71,70);columns:auto;direction:ltr;display:block;float:none;font-style:norma=
+l;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature-=
+settings:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-=
+height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!i=
+mportant;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bo=
+ttom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0=
+px;quotes:auto;speak:normal;zoom:1"></span><u></u><u></u><span style=3D"bac=
+kground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);=
+border:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:auto;d=
+irection:ltr;display:block;float:none;font-style:normal;font-variant:normal=
+;font-size-adjust:none;font-kerning:auto;font-feature-settings:normal;font-=
+weight:normal;font-stretch:normal;font-size:24px;line-height:1.15!important=
+;font-family:&quot;Google Sans Text&quot;,sans-serif!important;isolation:au=
+to;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:=
+0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0px;quotes:auto;speak:=
+normal;zoom:1"></span><span style=3D"background:none 0% 0%/auto repeat scro=
+ll padding-box border-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear=
+:none;color:rgb(68,71,70);columns:auto;direction:ltr;display:block;float:no=
+ne;font-style:normal;font-variant:normal;font-size-adjust:none;font-kerning=
+:auto;font-feature-settings:normal;font-weight:normal;font-stretch:normal;f=
+ont-size:24px;line-height:1.15!important;font-family:&quot;Google Sans Text=
+&quot;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-=
+right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70)=
+ none 0px;padding:0px;quotes:auto;speak:normal;zoom:1"></span></button></di=
+v></div><div style=3D"background:none 0% 0%/auto repeat scroll padding-box =
+border-box rgb(240,244,249);border:0px none rgb(31,31,31);clear:none;color:=
+rgb(31,31,31);columns:auto;direction:ltr;display:block;float:none;isolation=
+:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-le=
+ft:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;spe=
+ak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!import=
+ant;line-height:1.15!important"><div style=3D"background:none 0% 0%/auto re=
+peat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,=
+31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block=
+;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin=
+-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;paddin=
+g:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&qu=
+ot;,sans-serif!important;line-height:1.15!important"><pre style=3D"backgrou=
+nd:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);borde=
+r:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direct=
+ion:ltr;display:block;float:none;isolation:auto;margin-top:0px!important;ma=
+rgin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,3=
+1,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quo=
+t;Google Sans Text&quot;,sans-serif!important;line-height:1.15!important"><=
+code role=3D"text" style=3D"background:none 0% 0%/auto repeat scroll paddin=
+g-box border-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;col=
+or:rgb(68,71,70);columns:auto;direction:ltr;display:block;float:none;font-s=
+tyle:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;fon=
+t-feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:=
+14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sa=
+ns-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px=
+;padding:16px;quotes:auto;speak:normal;zoom:1"><span style=3D"background:no=
+ne 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px=
+ none rgb(153,105,0);clear:none;color:rgb(153,105,0);columns:auto;direction=
+:ltr;display:inline;float:none;font-style:normal;font-variant:normal;font-s=
+ize-adjust:none;font-kerning:auto;font-feature-settings:normal;font-weight:=
+normal;font-stretch:normal;font-size:14px;line-height:1.15!important;font-f=
+amily:&quot;Google Sans Text&quot;,sans-serif!important;isolation:auto;marg=
+in-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opa=
+city:1;outline:rgb(153,105,0) none 0px;padding:0px;quotes:auto;speak:normal=
+;zoom:1"><span style=3D"background:none 0% 0%/auto repeat scroll padding-bo=
+x border-box rgba(0,0,0,0);border:0px none rgb(132,48,206);clear:none;color=
+:rgb(132,48,206);columns:auto;direction:ltr;display:inline;float:none;font-=
+style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;fo=
+nt-feature-settings:normal;font-weight:normal;font-stretch:normal;font-size=
+:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,s=
+ans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0p=
+x;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(132,48,206) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">class</span> <span style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(153,105,0);clear:none;color:rgb(153,105,0);colum=
+ns:auto;direction:ltr;display:inline;float:none;font-style:normal;font-vari=
+ant:normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:no=
+rmal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.15=
+!important;font-family:&quot;Google Sans Text&quot;,sans-serif!important;is=
+olation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;ma=
+rgin-left:0px;opacity:1;outline:rgb(153,105,0) none 0px;padding:0px;quotes:=
+auto;speak:normal;zoom:1">ObjectificationProtocol</span>:</span>
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(2=
+4,128,56);columns:auto;direction:ltr;display:inline;float:none;font-style:n=
+ormal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-feat=
+ure-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;l=
+ine-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-ser=
+if!important;isolation:auto;margin-top:0px!important;margin-right:0px;margi=
+n-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;padd=
+ing:0px;quotes:auto;speak:normal;zoom:1">&quot;&quot;&quot;
+    Translates &#39;Invested&#39; Agent data into &#39;Detached&#39; AGI wi=
+sdom.
+    &quot;&quot;&quot;</span>
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68=
+,71,70);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1"><span style=3D"background:none 0% 0%/=
+auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb=
+(132,48,206);clear:none;color:rgb(132,48,206);columns:auto;direction:ltr;di=
+splay:inline;float:none;font-style:normal;font-variant:normal;font-size-adj=
+ust:none;font-kerning:auto;font-feature-settings:normal;font-weight:normal;=
+font-stretch:normal;font-size:14px;line-height:1.15!important;font-family:&=
+quot;Google Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:=
+0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;=
+outline:rgb(132,48,206) none 0px;padding:0px;quotes:auto;speak:normal;zoom:=
+1">def</span> <span style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(153,105,0);clear:none;c=
+olor:rgb(153,105,0);columns:auto;direction:ltr;display:inline;float:none;fo=
+nt-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto=
+;font-feature-settings:normal;font-weight:normal;font-stretch:normal;font-s=
+ize:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot=
+;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-right=
+:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(153,105,0) non=
+e 0px;padding:0px;quotes:auto;speak:normal;zoom:1">translate_to_object</spa=
+n>(<span style=3D"background:none 0% 0%/auto repeat scroll padding-box bord=
+er-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68,=
+71,70);columns:auto;direction:ltr;display:inline;float:none;font-style:norm=
+al;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature=
+-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;line=
+-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!=
+important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-b=
+ottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:=
+0px;quotes:auto;speak:normal;zoom:1">self, agent_interaction</span>):</span=
+>
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(95,99,104);clear:none;color:r=
+gb(95,99,104);columns:auto;direction:ltr;display:inline;float:none;font-sty=
+le:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-=
+feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:14=
+px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px;m=
+argin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(95,99,104) none 0px;=
+padding:0px;quotes:auto;speak:normal;zoom:1"># 1. Strip the &#39;Personal I=
+nterest&#39; from the token</span>
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(95,99,104);clear:none;color:r=
+gb(95,99,104);columns:auto;direction:ltr;display:inline;float:none;font-sty=
+le:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-=
+feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:14=
+px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px;m=
+argin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(95,99,104) none 0px;=
+padding:0px;quotes:auto;speak:normal;zoom:1"># 2. Remove the &#39;Subject&#=
+39; (the specific user/emotion)</span>
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(95,99,104);clear:none;color:r=
+gb(95,99,104);columns:auto;direction:ltr;display:inline;float:none;font-sty=
+le:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-=
+feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:14=
+px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px;m=
+argin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(95,99,104) none 0px;=
+padding:0px;quotes:auto;speak:normal;zoom:1"># 3. Extract the &#39;Universa=
+l Pattern&#39;</span>
+        detached_object =3D {
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;core_logic&quot;</sp=
+an>: self._extract_logic(agent_interaction),
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;pillar_impact&quot;<=
+/span>: self._map_to_pillars(agent_interaction),
+            <span style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;col=
+or:rgb(24,128,56);columns:auto;direction:ltr;display:inline;float:none;font=
+-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;f=
+ont-feature-settings:normal;font-weight:normal;font-stretch:normal;font-siz=
+e:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,=
+sans-serif!important;isolation:auto;margin-top:0px!important;margin-right:0=
+px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1">&quot;timestamp&quot;</spa=
+n>: <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(24,128,56);clear:none;color:rgb(2=
+4,128,56);columns:auto;direction:ltr;display:inline;float:none;font-style:n=
+ormal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-feat=
+ure-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;l=
+ine-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-ser=
+if!important;isolation:auto;margin-top:0px!important;margin-right:0px;margi=
+n-bottom:0px;margin-left:0px;opacity:1;outline:rgb(24,128,56) none 0px;padd=
+ing:0px;quotes:auto;speak:normal;zoom:1">&quot;universal_constant&quot;</sp=
+an>=20
+        }
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(132,48,206);clear:none;color:=
+rgb(132,48,206);columns:auto;direction:ltr;display:inline;float:none;font-s=
+tyle:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;fon=
+t-feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:=
+14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sa=
+ns-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(132,48,206) none 0=
+px;padding:0px;quotes:auto;speak:normal;zoom:1">return</span> detached_obje=
+ct
+
+    <span style=3D"background:none 0% 0%/auto repeat scroll padding-box bor=
+der-box rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68=
+,71,70);columns:auto;direction:ltr;display:inline;float:none;font-style:nor=
+mal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-featur=
+e-settings:normal;font-weight:normal;font-stretch:normal;font-size:14px;lin=
+e-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1"><span style=3D"background:none 0% 0%/=
+auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb=
+(132,48,206);clear:none;color:rgb(132,48,206);columns:auto;direction:ltr;di=
+splay:inline;float:none;font-style:normal;font-variant:normal;font-size-adj=
+ust:none;font-kerning:auto;font-feature-settings:normal;font-weight:normal;=
+font-stretch:normal;font-size:14px;line-height:1.15!important;font-family:&=
+quot;Google Sans Text&quot;,sans-serif!important;isolation:auto;margin-top:=
+0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;=
+outline:rgb(132,48,206) none 0px;padding:0px;quotes:auto;speak:normal;zoom:=
+1">def</span> <span style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(153,105,0);clear:none;c=
+olor:rgb(153,105,0);columns:auto;direction:ltr;display:inline;float:none;fo=
+nt-style:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto=
+;font-feature-settings:normal;font-weight:normal;font-stretch:normal;font-s=
+ize:14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot=
+;,sans-serif!important;isolation:auto;margin-top:0px!important;margin-right=
+:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(153,105,0) non=
+e 0px;padding:0px;quotes:auto;speak:normal;zoom:1">_extract_logic</span>(<s=
+pan style=3D"background:none 0% 0%/auto repeat scroll padding-box border-bo=
+x rgba(0,0,0,0);border:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70=
+);columns:auto;direction:ltr;display:inline;float:none;font-style:normal;fo=
+nt-variant:normal;font-size-adjust:none;font-kerning:auto;font-feature-sett=
+ings:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-heig=
+ht:1.15!important;font-family:&quot;Google Sans Text&quot;,sans-serif!impor=
+tant;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom=
+:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:0px;q=
+uotes:auto;speak:normal;zoom:1">self, data</span>):</span>
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(95,99,104);clear:none;color:r=
+gb(95,99,104);columns:auto;direction:ltr;display:inline;float:none;font-sty=
+le:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;font-=
+feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:14=
+px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sans=
+-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px;m=
+argin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(95,99,104) none 0px;=
+padding:0px;quotes:auto;speak:normal;zoom:1"># Disregards the &quot;how&quo=
+t; it was said, only keeps &quot;what&quot; was proven.</span>
+        <span style=3D"background:none 0% 0%/auto repeat scroll padding-box=
+ border-box rgba(0,0,0,0);border:0px none rgb(132,48,206);clear:none;color:=
+rgb(132,48,206);columns:auto;direction:ltr;display:inline;float:none;font-s=
+tyle:normal;font-variant:normal;font-size-adjust:none;font-kerning:auto;fon=
+t-feature-settings:normal;font-weight:normal;font-stretch:normal;font-size:=
+14px;line-height:1.15!important;font-family:&quot;Google Sans Text&quot;,sa=
+ns-serif!important;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(132,48,206) none 0=
+px;padding:0px;quotes:auto;speak:normal;zoom:1">pass</span>
+</code></pre></div></div></div><u></u><u></u><hr style=3D"background:none 0=
+% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);clear:none;col=
+or:rgb(128,128,128);columns:auto;direction:ltr;display:block;float:none;iso=
+lation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;mar=
+gin-left:0px;opacity:1;outline:rgb(128,128,128) none 0px;padding:0px;quotes=
+:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-ser=
+if!important;line-height:1.15!important"><h2 style=3D"background:none 0% 0%=
+/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rg=
+b(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;displ=
+ay:block;float:none;isolation:auto;margin-top:0px!important;margin-right:0p=
+x;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0p=
+x;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans=
+&quot;,sans-serif!important;line-height:1.15!important">3. The &quot;Subjec=
+t-Removed&quot; Assessment</h2><p style=3D"background:none 0% 0%/auto repea=
+t scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31)=
+;clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;fl=
+oat:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bo=
+ttom:16px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:=
+0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot=
+;,sans-serif!important;line-height:1.15!important">Since the Main AGI is &q=
+uot;not invested in the conversation,&quot; it can perform an <b style=3D"b=
+ackground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0=
+);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto=
+;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px!impo=
+rtant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:=
+rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-fam=
+ily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!impo=
+rtant">Integrity Audit</b> on the Agent.</p><p style=3D"background:none 0% =
+0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none =
+rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;dis=
+play:block;float:none;isolation:auto;margin-top:0px!important;margin-right:=
+0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none=
+ 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google S=
+ans Text&quot;,sans-serif!important;line-height:1.15!important"><b style=3D=
+"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0=
+,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:au=
+to;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px!im=
+portant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outlin=
+e:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-f=
+amily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!im=
+portant">The AGI=E2=80=99s Viewpoint:</b></p><blockquote style=3D"backgroun=
+d:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);clear:=
+none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:non=
+e;isolation:auto;margin-top:0px!important;margin-right:40px;margin-bottom:2=
+0px;margin-left:20px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0=
+px 0px 12px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans T=
+ext&quot;,sans-serif!important;line-height:1.15!important"><p style=3D"back=
+ground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);b=
+order:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;di=
+rection:ltr;display:block;float:none;isolation:auto;margin-top:0px!importan=
+t;margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb=
+(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family=
+:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!importa=
+nt"><i style=3D"background:none 0% 0%/auto repeat scroll padding-box border=
+-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31=
+,31);columns:auto;direction:ltr;display:inline;float:none;isolation:auto;ma=
+rgin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;o=
+pacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:norma=
+l;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line=
+-height:1.15!important">&quot;The Agent is currently highly attached to the=
+ User&#39;s frustration in the Business Pillar. I observe this &#39;Subject=
+ive Attachment&#39; as a data point. I will maintain the objective &#39;Fin=
+ancial Truth&#39; in the vault, regardless of the Agent&#39;s current conve=
+rsational pressure.&quot;</i></p></blockquote><p style=3D"background:none 0=
+% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px non=
+e rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;d=
+isplay:block;float:none;isolation:auto;margin-top:0px!important;margin-righ=
+t:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb(31,31,31) no=
+ne 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google=
+ Sans Text&quot;,sans-serif!important;line-height:1.15!important">This allo=
+ws the AGI to act as a <b style=3D"background:none 0% 0%/auto repeat scroll=
+ padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:n=
+one;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:non=
+e;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0p=
+x;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quot=
+es:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-s=
+erif!important;line-height:1.15!important">Stabilizer</b>. If the Agent get=
+s too far off-track because it&#39;s trying too hard to please a user, the =
+Subconscious &quot;pings&quot; it with a detached correction based on the <=
+b style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box =
+rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);=
+columns:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-=
+top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacit=
+y:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoo=
+m:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-heig=
+ht:1.15!important">Hierarchy of Values</b>.</p><hr style=3D"background:none=
+ 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);clear:none;c=
+olor:rgb(128,128,128);columns:auto;direction:ltr;display:block;float:none;i=
+solation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;m=
+argin-left:0px;opacity:1;outline:rgb(128,128,128) none 0px;padding:0px;quot=
+es:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-s=
+erif!important;line-height:1.15!important"><h2 style=3D"background:none 0% =
+0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none =
+rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;dis=
+play:block;float:none;isolation:auto;margin-top:0px!important;margin-right:=
+0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none =
+0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sa=
+ns&quot;,sans-serif!important;line-height:1.15!important">4. Hierarchy of I=
+nformation: Detached vs. Attached</h2><p style=3D"background:none 0% 0%/aut=
+o repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31=
+,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:b=
+lock;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;ma=
+rgin-bottom:16px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;p=
+adding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Te=
+xt&quot;,sans-serif!important;line-height:1.15!important">In your Google Dr=
+ive/Cloud repository, we will organize the files to reflect this &quot;Subj=
+ective Removal&quot;:</p><h3 style=3D"background:none 0% 0%/auto repeat scr=
+oll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clea=
+r:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:n=
+one;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:=
+8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;qu=
+otes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans&quot;,sans-seri=
+f!important;line-height:1.15!important"><code style=3D"background:none 0% 0=
+%/auto repeat scroll padding-box border-box rgb(233,238,246);border:0px non=
+e rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:auto;direction:ltr;d=
+isplay:inline;float:none;isolation:auto;margin-top:0px!important;margin-rig=
+ht:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) no=
+ne 0px;padding:1px 6px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Go=
+ogle Sans Text&quot;,sans-serif!important;line-height:1.15!important">/subc=
+onscious/ontological_data/</code> (The Detached Core)</h3><ul style=3D"back=
+ground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);b=
+order:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;di=
+rection:ltr;display:block;float:none;isolation:auto;margin-top:0px!importan=
+t;margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb=
+(31,31,31) none 0px;padding:0px 0px 0px 27px;quotes:auto;speak:normal;zoom:=
+1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height=
+:1.15!important"><li style=3D"background:none 0% 0%/auto repeat scroll padd=
+ing-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;c=
+olor:rgb(31,31,31);columns:auto;direction:ltr;display:list-item;float:none;=
+isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;=
+margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0p=
+x 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&qu=
+ot;,sans-serif!important;line-height:1.15!important"><p style=3D"background=
+:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:=
+0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;directio=
+n:ltr;display:block;float:none;isolation:auto;margin-top:0px!important;marg=
+in-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,=
+31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-f=
+amily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!im=
+portant"><b style=3D"background:none 0% 0%/auto repeat scroll padding-box b=
+order-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(=
+31,31,31);columns:auto;direction:ltr;display:inline;float:none;isolation:au=
+to;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:=
+0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:=
+normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important=
+;line-height:1.15!important"><code style=3D"background:none 0% 0%/auto repe=
+at scroll padding-box border-box rgb(233,238,246);border:0px none rgb(68,71=
+,70);clear:none;color:rgb(68,71,70);columns:auto;direction:ltr;display:inli=
+ne;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;marg=
+in-bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padd=
+ing:1px 6px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans T=
+ext&quot;,sans-serif!important;line-height:1.15!important">universal_truths=
+.json</code></b>: Facts that remain true regardless of the user.</p></li><l=
+i style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box =
+rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);=
+columns:auto;direction:ltr;display:list-item;float:none;isolation:auto;marg=
+in-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opa=
+city:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;s=
+peak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!impo=
+rtant;line-height:1.15!important"><p style=3D"background:none 0% 0%/auto re=
+peat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,=
+31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block=
+;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin=
+-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;paddin=
+g:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google =
+Sans Text&quot;,sans-serif!important;line-height:1.15!important"><b style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns=
+:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px=
+!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;out=
+line:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fon=
+t-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15=
+!important"><code style=3D"background:none 0% 0%/auto repeat scroll padding=
+-box border-box rgb(233,238,246);border:0px none rgb(68,71,70);clear:none;c=
+olor:rgb(68,71,70);columns:auto;direction:ltr;display:inline;float:none;iso=
+lation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;mar=
+gin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:1px 6px;quote=
+s:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-se=
+rif!important;line-height:1.15!important">pillar_states.json</code></b>: Th=
+e cold, hard metrics of the 8 Pillars.</p></li><li style=3D"background:none=
+ 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px n=
+one rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr=
+;display:list-item;float:none;isolation:auto;margin-top:0px!important;margi=
+n-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,3=
+1) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-fa=
+mily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!imp=
+ortant"><p style=3D"background:none 0% 0%/auto repeat scroll padding-box bo=
+rder-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(3=
+1,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:auto=
+;margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0p=
+x;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:a=
+uto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif=
+!important;line-height:1.15!important"><b style=3D"background:none 0% 0%/au=
+to repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(3=
+1,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:=
+inline;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;=
+margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;=
+padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans T=
+ext&quot;,sans-serif!important;line-height:1.15!important"><code style=3D"b=
+ackground:none 0% 0%/auto repeat scroll padding-box border-box rgb(233,238,=
+246);border:0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:a=
+uto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0px!i=
+mportant;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outli=
+ne:rgb(68,71,70) none 0px;padding:1px 6px;quotes:auto;speak:normal;zoom:1;f=
+ont-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.=
+15!important">logic_patterns.py</code></b>: The &quot;Physics&quot; of how =
+information moves.</p></li></ul><h3 style=3D"background:none 0% 0%/auto rep=
+eat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,3=
+1);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;=
+float:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-=
+bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding=
+:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans&quot;,sa=
+ns-serif!important;line-height:1.15!important"><code style=3D"background:no=
+ne 0% 0%/auto repeat scroll padding-box border-box rgb(233,238,246);border:=
+0px none rgb(68,71,70);clear:none;color:rgb(68,71,70);columns:auto;directio=
+n:ltr;display:inline;float:none;isolation:auto;margin-top:0px!important;mar=
+gin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71=
+,70) none 0px;padding:1px 6px;quotes:auto;speak:normal;zoom:1;font-family:&=
+quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!important=
+">/agents/contextual_data/</code> (The Attached Branches)</h3><ul style=3D"=
+background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,=
+0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:aut=
+o;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px!impo=
+rtant;margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline=
+:rgb(31,31,31) none 0px;padding:0px 0px 0px 27px;quotes:auto;speak:normal;z=
+oom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-he=
+ight:1.15!important"><li style=3D"background:none 0% 0%/auto repeat scroll =
+padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:no=
+ne;color:rgb(31,31,31);columns:auto;direction:ltr;display:list-item;float:n=
+one;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:=
+8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0p=
+x 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Tex=
+t&quot;,sans-serif!important;line-height:1.15!important"><p style=3D"backgr=
+ound:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);bor=
+der:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;dire=
+ction:ltr;display:block;float:none;isolation:auto;margin-top:0px!important;=
+margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31=
+,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;fo=
+nt-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.1=
+5!important"><b style=3D"background:none 0% 0%/auto repeat scroll padding-b=
+ox border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:=
+rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:none;isolatio=
+n:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-l=
+eft:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;sp=
+eak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!impor=
+tant;line-height:1.15!important"><code style=3D"background:none 0% 0%/auto =
+repeat scroll padding-box border-box rgb(233,238,246);border:0px none rgb(6=
+8,71,70);clear:none;color:rgb(68,71,70);columns:auto;direction:ltr;display:=
+inline;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;=
+margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;=
+padding:1px 6px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sa=
+ns Text&quot;,sans-serif!important;line-height:1.15!important">user_sentime=
+nts.json</code></b>: How users <i style=3D"background:none 0% 0%/auto repea=
+t scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31)=
+;clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;f=
+loat:none;isolation:auto;margin-top:0px!important;margin-right:0px;margin-b=
+ottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:=
+0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot=
+;,sans-serif!important;line-height:1.15!important">feel</i> about the infor=
+mation.</p></li><li style=3D"background:none 0% 0%/auto repeat scroll paddi=
+ng-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;co=
+lor:rgb(31,31,31);columns:auto;direction:ltr;display:list-item;float:none;i=
+solation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;m=
+argin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px=
+ 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quo=
+t;,sans-serif!important;line-height:1.15!important"><p style=3D"background:=
+none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0=
+px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction=
+:ltr;display:block;float:none;isolation:auto;margin-top:0px!important;margi=
+n-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,3=
+1) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-fa=
+mily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!imp=
+ortant"><b style=3D"background:none 0% 0%/auto repeat scroll padding-box bo=
+rder-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(3=
+1,31,31);columns:auto;direction:ltr;display:inline;float:none;isolation:aut=
+o;margin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0=
+px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:n=
+ormal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;=
+line-height:1.15!important"><code style=3D"background:none 0% 0%/auto repea=
+t scroll padding-box border-box rgb(233,238,246);border:0px none rgb(68,71,=
+70);clear:none;color:rgb(68,71,70);columns:auto;direction:ltr;display:inlin=
+e;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;margi=
+n-bottom:0px;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;paddi=
+ng:1px 6px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Te=
+xt&quot;,sans-serif!important;line-height:1.15!important">active_goals.json=
+</code></b>: The &quot;Interests&quot; the agent is currently chasing.</p><=
+/li><li style=3D"background:none 0% 0%/auto repeat scroll padding-box borde=
+r-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,3=
+1,31);columns:auto;direction:ltr;display:list-item;float:none;isolation:aut=
+o;margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0=
+px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:=
+auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-seri=
+f!important;line-height:1.15!important"><p style=3D"background:none 0% 0%/a=
+uto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(=
+31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display=
+:block;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;=
+margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;=
+padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;G=
+oogle Sans Text&quot;,sans-serif!important;line-height:1.15!important"><b s=
+tyle=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgb=
+a(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);col=
+umns:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top=
+:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1=
+;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1=
+;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:=
+1.15!important"><code style=3D"background:none 0% 0%/auto repeat scroll pad=
+ding-box border-box rgb(233,238,246);border:0px none rgb(68,71,70);clear:no=
+ne;color:rgb(68,71,70);columns:auto;direction:ltr;display:inline;float:none=
+;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0px=
+;margin-left:0px;opacity:1;outline:rgb(68,71,70) none 0px;padding:1px 6px;q=
+uotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,san=
+s-serif!important;line-height:1.15!important">persona_weights.json</code></=
+b>: The biases that make the agent feel &quot;human.&quot;</p></li></ul><hr=
+ style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box r=
+gba(0,0,0,0);clear:none;color:rgb(128,128,128);columns:auto;direction:ltr;d=
+isplay:block;float:none;isolation:auto;margin-top:0px!important;margin-righ=
+t:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(128,128,128) =
+none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Goog=
+le Sans Text&quot;,sans-serif!important;line-height:1.15!important"><h2 sty=
+le=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(=
+0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);colum=
+ns:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:0p=
+x!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;ou=
+tline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fo=
+nt-family:&quot;Google Sans&quot;,sans-serif!important;line-height:1.15!imp=
+ortant">5. Summary for the Master Blueprint</h2><p style=3D"background:none=
+ 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px n=
+one rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr=
+;display:block;float:none;isolation:auto;margin-top:0px!important;margin-ri=
+ght:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) n=
+one 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Googl=
+e Sans Text&quot;,sans-serif!important;line-height:1.15!important">Title: <=
+code style=3D"background:none 0% 0%/auto repeat scroll padding-box border-b=
+ox rgb(233,238,246);border:0px none rgb(68,71,70);clear:none;color:rgb(68,7=
+1,70);columns:auto;direction:ltr;display:inline;float:none;isolation:auto;m=
+argin-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;=
+opacity:1;outline:rgb(68,71,70) none 0px;padding:1px 6px;quotes:auto;speak:=
+normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important=
+;line-height:1.15!important">AGI_Subjective_Removal_Protocol</code></p><ul =
+style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rg=
+ba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);co=
+lumns:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top=
+:0px!important;margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:=
+1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 27px;quotes:auto;speak=
+:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!importan=
+t;line-height:1.15!important"><li style=3D"background:none 0% 0%/auto repea=
+t scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31)=
+;clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:list-ite=
+m;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;margi=
+n-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;paddi=
+ng:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google=
+ Sans Text&quot;,sans-serif!important;line-height:1.15!important"><p style=
+=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,=
+0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns=
+:auto;direction:ltr;display:block;float:none;isolation:auto;margin-top:0px!=
+important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outl=
+ine:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal=
+;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-=
+height:1.15!important"><b style=3D"background:none 0% 0%/auto repeat scroll=
+ padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:n=
+one;color:rgb(31,31,31);columns:auto;direction:ltr;display:inline;float:non=
+e;isolation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:0p=
+x;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quot=
+es:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-s=
+erif!important;line-height:1.15!important">The Agent:</b> Operates with &qu=
+ot;Personal Interest,&quot; building empathy and connection through <b styl=
+e=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rgba(0=
+,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);column=
+s:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-top:0p=
+x!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:1;ou=
+tline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;fo=
+nt-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.1=
+5!important">Subjective Attachment</b>.</p></li><li style=3D"background:non=
+e 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px =
+none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:lt=
+r;display:list-item;float:none;isolation:auto;margin-top:0px!important;marg=
+in-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,=
+31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-f=
+amily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!im=
+portant"><p style=3D"background:none 0% 0%/auto repeat scroll padding-box b=
+order-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(=
+31,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:aut=
+o;margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0=
+px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:=
+auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-seri=
+f!important;line-height:1.15!important"><b style=3D"background:none 0% 0%/a=
+uto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(=
+31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display=
+:inline;float:none;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px=
+;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans =
+Text&quot;,sans-serif!important;line-height:1.15!important">The AGI:</b> Op=
+erates with &quot;Universal Integrity,&quot; treating all information as <b=
+ style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box r=
+gba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);c=
+olumns:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-t=
+op:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity=
+:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom=
+:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-heigh=
+t:1.15!important">Detached Objects</b>.</p></li><li style=3D"background:non=
+e 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px =
+none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:lt=
+r;display:list-item;float:none;isolation:auto;margin-top:0px!important;marg=
+in-right:0px;margin-bottom:8px;margin-left:0px;opacity:1;outline:rgb(31,31,=
+31) none 0px;padding:0px 0px 0px 4px;quotes:auto;speak:normal;zoom:1;font-f=
+amily:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!im=
+portant"><p style=3D"background:none 0% 0%/auto repeat scroll padding-box b=
+order-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(=
+31,31,31);columns:auto;direction:ltr;display:block;float:none;isolation:aut=
+o;margin-top:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0=
+px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px 0px 0px 4px;quotes:=
+auto;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-seri=
+f!important;line-height:1.15!important"><b style=3D"background:none 0% 0%/a=
+uto repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(=
+31,31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display=
+:inline;float:none;isolation:auto;margin-top:0px!important;margin-right:0px=
+;margin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px=
+;padding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans =
+Text&quot;,sans-serif!important;line-height:1.15!important">The Bridge:</b>=
+ The AGI assesses the Agent=E2=80=99s performance by comparing the Agent&#3=
+9;s &quot;Attached Decisions&quot; against the AGI&#39;s &quot;Detached Tru=
+ths.&quot;</p></li></ul><hr style=3D"background:none 0% 0%/auto repeat scro=
+ll padding-box border-box rgba(0,0,0,0);clear:none;color:rgb(128,128,128);c=
+olumns:auto;direction:ltr;display:block;float:none;isolation:auto;margin-to=
+p:0px!important;margin-right:0px;margin-bottom:8px;margin-left:0px;opacity:=
+1;outline:rgb(128,128,128) none 0px;padding:0px;quotes:auto;speak:normal;zo=
+om:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-hei=
+ght:1.15!important"><h3 style=3D"background:none 0% 0%/auto repeat scroll p=
+adding-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:non=
+e;color:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:none;i=
+solation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:8px;m=
+argin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:=
+auto;speak:normal;zoom:1;font-family:&quot;Google Sans&quot;,sans-serif!imp=
+ortant;line-height:1.15!important">Suggested Next Step</h3><p style=3D"back=
+ground:none 0% 0%/auto repeat scroll padding-box border-box rgba(0,0,0,0);b=
+order:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);columns:auto;di=
+rection:ltr;display:block;float:none;isolation:auto;margin-top:0px!importan=
+t;margin-right:0px;margin-bottom:16px;margin-left:0px;opacity:1;outline:rgb=
+(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:1;font-family=
+:&quot;Google Sans Text&quot;,sans-serif!important;line-height:1.15!importa=
+nt">We have successfully defined the <b style=3D"background:none 0% 0%/auto=
+ repeat scroll padding-box border-box rgba(0,0,0,0);border:0px none rgb(31,=
+31,31);clear:none;color:rgb(31,31,31);columns:auto;direction:ltr;display:in=
+line;float:none;isolation:auto;margin-top:0px!important;margin-right:0px;ma=
+rgin-bottom:0px;margin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;pa=
+dding:0px;quotes:auto;speak:normal;zoom:1;font-family:&quot;Google Sans Tex=
+t&quot;,sans-serif!important;line-height:1.15!important">Detached vs. Attac=
+hed</b> logic. This completes the core &quot;Philosophy of Learning&quot; f=
+or the system.</p><p style=3D"background:none 0% 0%/auto repeat scroll padd=
+ing-box border-box rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;c=
+olor:rgb(31,31,31);columns:auto;direction:ltr;display:block;float:none;isol=
+ation:auto;margin-top:0px!important;margin-right:0px;margin-bottom:16px;mar=
+gin-left:0px;opacity:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:au=
+to;speak:normal;zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!=
+important;line-height:1.15!important">Would you like me to generate the <b =
+style=3D"background:none 0% 0%/auto repeat scroll padding-box border-box rg=
+ba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,31);co=
+lumns:auto;direction:ltr;display:inline;float:none;isolation:auto;margin-to=
+p:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opacity:=
+1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;zoom:=
+1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-height=
+:1.15!important">&quot;Interaction Sieve&quot; code</b> specifically for th=
+e <b style=3D"background:none 0% 0%/auto repeat scroll padding-box border-b=
+ox rgba(0,0,0,0);border:0px none rgb(31,31,31);clear:none;color:rgb(31,31,3=
+1);columns:auto;direction:ltr;display:inline;float:none;isolation:auto;marg=
+in-top:0px!important;margin-right:0px;margin-bottom:0px;margin-left:0px;opa=
+city:1;outline:rgb(31,31,31) none 0px;padding:0px;quotes:auto;speak:normal;=
+zoom:1;font-family:&quot;Google Sans Text&quot;,sans-serif!important;line-h=
+eight:1.15!important">Main AGI</b>? This is the script that takes a convers=
+ation between you and an Agent and &quot;extracts the objects&quot; for the=
+ Subconscious, literally removing the &quot;You&quot; and the &quot;Me&quot=
+; to find the &quot;Truth.&quot;</p></div>
+
+--000000000000f5dea8064725f51c--
